@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Netstat Data Collector | NetApp Cloud Docs</title>
+  <title>About Cloud Secure | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Netstat Data Collector | NetApp Cloud Docs" />
+  <meta property="og:title" content="About Cloud Secure | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_config_telegraf_netstat.html" />
-	<meta property="og:description" content="Netstat data collector configuration" />
-  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/us-en/cs_intro.html" />
+	<meta property="og:description" content="Overview" />
+  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,17 +17,17 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Netstat data collector configuration">
-  <meta name="keywords" content=" telegraf, installation, install, netstat">
+  <meta name="description" content="Overview">
+  <meta name="keywords" content=" CloudSecure">
   
   
 
   <!-- Icons -->
-  <link rel="icon" href="/cloudinsights/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/cloudinsights/us-en/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/us-en/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -36,23 +36,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/cloudinsights/common/css/esb.min.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/doc.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/doc-components.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/esb.min.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/cloudinsights/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/cloudinsights/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/cloudinsights/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/cloudinsights/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/cloudinsights/us-en/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/cloudinsights/us-en/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/cloudinsights/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/cloudinsights/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/netapp.css' type='text/css'>
 
   
 
@@ -61,23 +61,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/cloudinsights/js/na-search.js'></script>
+    <script src='/cloudinsights/us-en/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/cloudinsights/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/cloudinsights/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/cloudinsights/us-en/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/cloudinsights/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism-netapp.css' type='text/css'>
 
-  <script src='/cloudinsights/js/clouddocs.js'></script>
-  <script src='/cloudinsights/js/s_code_impl.js'></script>
-  <script src='/cloudinsights/js/jquery.navgoco.min.js'></script>
+  <script src='/cloudinsights/us-en/js/clouddocs.js'></script>
+  <script src='/cloudinsights/us-en/js/s_code_impl.js'></script>
+  <script src='/cloudinsights/us-en/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/cloudinsights/js/toc.js'></script>
-  <script src='/cloudinsights/js/customscripts.js'></script>
+  <script src='/cloudinsights/us-en/js/toc.js'></script>
+  <script src='/cloudinsights/us-en/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -194,7 +194,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/cloudinsights/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -202,11 +202,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -226,7 +226,7 @@
               <span class="ie-i18n-lang">English</span>
               <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                 <title>globe</title>
-                <use xlink:href="/cloudinsights/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
               </svg>
             </a>
           </li>
@@ -763,7 +763,7 @@
   
 
   
-    <li class="active"><a href="task_config_telegraf_netstat.html">Netstat</a></li>
+    <li><a href="task_config_telegraf_netstat.html">Netstat</a></li>
   
 
   
@@ -1210,11 +1210,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Netstat Data Collector
+  <h1 class="n-doc__component-detail-heading">About Cloud Secure
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_config_telegraf_netstat.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Netstat Data Collector](https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_netstat.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/cs_intro.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[About Cloud Secure](https://docs.netapp.com/us-en/cloudinsights/cs_intro.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -1222,18 +1222,10 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-30 17:45:44 +0000">05/30/2019</time>
+<time datetime="2019-10-22 15:30:31 +0000">10/22/2019</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/netapp-alavoie">
-    <img  class="avatar avatar-small"
-          alt="netapp-alavoie"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/39956590?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/dgracenetapp">
     <img  class="avatar avatar-small"
@@ -1250,79 +1242,37 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Insights uses this data collector to gather Netstat metrics.</p>
+<p>Cloud Secure helps protect your data with actionable intelligence on insider threats. It provides centralized visibility and control of all corporate data access across hybrid cloud environments to ensure security and compliance goals are met.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="installation">Installation</h2>
+<h2 id="visibility">Visibility</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>From <strong>Admin &gt; Data Collectors</strong>, click <strong>+Data Collector</strong>. Under <strong>Services</strong>, choose Netstat.</p>
 <div class="paragraph">
-<p>Select the Operating System or Platform on which the Telegraf agent is installed.</p>
-</div>
-</li>
-<li>
-<p>If you haven&#8217;t already installed an Agent for collection, or you wish to install an Agent for a different Operating System or Platform, click <em>Show Instructions</em> to expand the <a href="task_config_telegraf_agent.html">Agent installation</a> instructions.</p>
-</li>
-<li>
-<p>Select the Agent Access Key for use with this data collector. You can add a new Agent Access Key by clicking the <strong>+ Agent Access Key</strong> button. Best practice: Use a different Agent Access Key only when you want to group data collectors, for example, by OS/Platform.</p>
-</li>
-<li>
-<p>Follow the configuration steps to configure the data collector. The instructions vary depending on the type of Operating System or Platform you are using to collect data.</p>
-</li>
-</ol>
+<p>Gain centralized visibility and control of user access to your critical corporate data stored on-premis or in the cloud.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/NetstatDCConfigWindows.png" alt="Windows Netstat Configuration"></span></p>
+<p>Replace tools and manual processes that fail to provide timely and accurate visibility into data access and control. Cloud Secure uniquely operates on both cloud and on-premis storage systems to give you real-time alerts of malicious user behavior.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="setup">Setup</h2>
+<h2 id="protection">Protection</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Protect organizational data from being misused by malicious or compromised users through advanced machine learning and anoomoly</p>
+</div>
+<div class="paragraph">
+<p>Alerts you to any abnormal data access through advanced machine learning and anomaly detection of user behavior.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="objects-and-counters">Objects and Counters</h2>
+<h2 id="compliance">Compliance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following objects and their counters are collected:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Object:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifiers:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attributes:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datapoints:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Netstat</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node UUID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node IP<br>
-Node Name</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Additional information may be found from the <a href="concept_requesting_support.html">Support</a> page.</p>
+<p>Ensure corporate compliance by auditing user data access to your critical corporate data stored on-premis or in the cloud.</p>
 </div>
 </div>
 </div>
@@ -1365,7 +1315,7 @@ Node Name</p></td>
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -1374,7 +1324,7 @@ Node Name</p></td>
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -1384,7 +1334,7 @@ Node Name</p></td>
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -1393,7 +1343,7 @@ Node Name</p></td>
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -1414,15 +1364,15 @@ Node Name</p></td>
 
     </div>
 
-    <script src="/cloudinsights/common/js/components.js"></script>
-    <script src="/cloudinsights/common/js/doc-components.js"></script>
+    <script src="/cloudinsights/us-en/common/js/components.js"></script>
+    <script src="/cloudinsights/us-en/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/cloudinsights/js/bundle.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/cloudinsights/js/prism.js'></script>
-    <script type="text/javascript" src='/cloudinsights/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/prism.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/prism-curl.js'></script>
 
   </body>
 
