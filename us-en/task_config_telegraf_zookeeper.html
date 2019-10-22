@@ -1222,7 +1222,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-30 17:47:49 +0000">05/30/2019</time>
+<time datetime="2019-09-03 14:47:44 +0000">09/03/2019</time>
 
 
 <span>Contributors
@@ -1232,6 +1232,14 @@
           alt="netapp-alavoie"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/39956590?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dgracenetapp">
+    <img  class="avatar avatar-small"
+          alt="dgracenetapp"
+          width="20" height="20"
+          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1277,7 +1285,9 @@
 <h2 id="setup">Setup</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Information may be found in the <a href="https://zookeeper.apache.org/">Zookeeper</a> documentation.</p>
+<p>At a minimum, you need to whitelist the Zookeeper four letter server commands mntr, srvr, and stat.<br>
+You can enable these commands using the following format: 4lw.commands.whitelist=mntr, srvr, stat in the zoo.cfg file.<br>
+There may be other four letter commands that are required in your configuration. See the <a href="https://zookeeper.apache.org/">Zookeeper</a> documentation for more information.</p>
 </div>
 </div>
 </div>
