@@ -1222,24 +1222,24 @@
 
 <p class="page-details">
 
-<time datetime="2019-10-18 21:00:37 +0000">10/18/2019</time>
+<time datetime="2019-10-23 15:24:26 +0000">10/23/2019</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/netapp-alavoie">
-    <img  class="avatar avatar-small"
-          alt="netapp-alavoie"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/39956590?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/dgracenetapp">
     <img  class="avatar avatar-small"
           alt="dgracenetapp"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/38116247?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-alavoie">
+    <img  class="avatar avatar-small"
+          alt="netapp-alavoie"
+          width="20" height="20"
+          src="https://avatars0.githubusercontent.com/u/39956590?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1333,11 +1333,14 @@ The port number can be obtained from the docker ps command output:<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Agent outbound URLs (port 433)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://*.preview.cloudsecure.netapp.com/" class="bare">https://*.preview.cloudsecure.netapp.com/</a><br>
-<a href="https://gateway.preview.cloudsecure.netapp.com/" class="bare">https://gateway.preview.cloudsecure.netapp.com/</a><br>
-agentlogin.preview.cloudsecure.netapp.com (used for getting the jwt token using certificates)<br>
-376015418222.dkr.ecr.us-east-1.amazonaws.com (used to pull docker images from ecr)<br>
-prod-us-east-1-starport-layer-bucket.s3.amazonaws.com (used to download docker image digest)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* <a href="https://&lt;tenant" class="bare">https://&lt;tenant</a> id&gt;.cs01.cloudinsights.netapp.com<br>
+<strong>* You can get tenant ID from the product URL. For example: <a href="https://ab1234.cs01.cloudinsights.netapp.com" class="bare">https://ab1234.cs01.cloudinsights.netapp.com</a><br>
+* You can use a boarder range to specify the tenant ID: https://</strong>.cs01.cloudinsights.netapp.com/<br>
+* <a href="https://gateway.c01.cloudinsights.netapp.com" class="bare">https://gateway.c01.cloudinsights.netapp.com</a><br>
+* agentlogin.cs01.cloudinsights.netapp.com<br>
+# agentlogin.preview.cloudsecure.netapp.com (used for getting the jwt token using certificates)<br>
+# 376015418222.dkr.ecr.us-east-1.amazonaws.com (used to pull docker images from ecr)<br>
+# prod-us-east-1-starport-layer-bucket.s3.amazonaws.com (used to download docker image digest)</p></td>
 </tr>
 </tbody>
 </table>
