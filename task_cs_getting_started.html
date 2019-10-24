@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Ceph storage data collector | NetApp Cloud Docs</title>
+  <title>Getting Started with Cloud Secure | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Ceph storage data collector | NetApp Cloud Docs" />
+  <meta property="og:title" content="Getting Started with Cloud Secure | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_dc_ceph_storage.html" />
-	<meta property="og:description" content="Configuring ceph data collector." />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_cs_getting_started.html" />
+	<meta property="og:description" content="general description requirements to get started" />
   <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Configuring ceph data collector.">
-  <meta name="keywords" content=" data collector, ceph">
+  <meta name="description" content="general description requirements to get started">
+  <meta name="keywords" content=" collectors, data collectors, configure, introduction, browsers">
   
   
 
@@ -411,7 +411,7 @@
   
 
   
-    <li class="active"><a href="task_dc_ceph_storage.html">Ceph</a></li>
+    <li><a href="task_dc_ceph_storage.html">Ceph</a></li>
   
 
   
@@ -1058,7 +1058,7 @@
         
 
   
-    <li><a href="task_cs_getting_started.html">Getting Started With Cloud Secure</a></li>
+    <li class="active"><a href="task_cs_getting_started.html">Getting Started With Cloud Secure</a></li>
   
 
   
@@ -1218,11 +1218,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Ceph storage data collector
+  <h1 class="n-doc__component-detail-heading">Getting Started with Cloud Secure
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_dc_ceph_storage.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Ceph storage data collector](https://docs.netapp.com/us-en/cloudinsights/task_dc_ceph_storage.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_cs_getting_started.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Getting Started with Cloud Secure](https://docs.netapp.com/us-en/cloudinsights/task_cs_getting_started.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -1230,7 +1230,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-21 20:32:49 +0000">05/21/2019</time>
+<time datetime="2019-10-24 19:13:38 +0000">10/24/2019</time>
 
 
 <span>Contributors
@@ -1247,165 +1247,56 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph lead">
-<p>Cloud Insights uses the Ceph storage data collector to discover inventory data from the Ceph storage  platform.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="terminology">Terminology</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Insights acquires inventory information with the Ceph storage data collector. For each asset type acquired by Cloud Insights, the most common terminology used for this asset is shown. When viewing or troubleshooting this data collector, keep the following terminology in mind:</p>
+<p>There are configuration tasks that need to be completed before you can start using Cloud Secure to monitor user activity.</p>
+</div>
+<div class="paragraph">
+<p>The Cloud Secure system uses an agent to collect access data from storage systems and user information from  Directory Services servers.</p>
+</div>
+<div class="paragraph">
+<p>You need to configure the following before you can start collecting data:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Vendor/Model Term</th>
-<th class="tableblock halign-left valign-top">Cloud Insights Term</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pool</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Pool</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Related information</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FileSystem</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Volume</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OSD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backend LUN</p></td>
-</tr>
-</tbody>
-</table>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure an Agent</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="concept_agent_requirements.html">Agent Requirements</a></p>
+</div>
 <div class="paragraph">
-<p>Note: These are common terminology mappings only and might not represent every case for this data source.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements">Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>The Ceph administrator IP address</p>
-</li>
-<li>
-<p>Administrator user name and password</p>
-</li>
-<li>
-<p>Port requirement: SSH Port 22</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="configuration">Configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ceph admin IP address</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ip address for the for the Ceph storage</p></td>
+<p><a href="task_add_agent.html">Add Agent</a></p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User name for the Ceph storage system administrator user account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure a User Directory Connector</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="task_config_user_dir_connect.html">Add User Directory Connector</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password for the administrator user account</p></td>
-</tr>
-</tbody>
-</table>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure data collectors</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Click <strong>Admin&gt;Data Collectors</strong></p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="advanced-configuration">Advanced configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inventory poll interval (min)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval between inventory polls. The default is 60 minutes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SSH port</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The default is port 22.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Some things to try if you encounter problems with this data collector:</p>
+<p>Click the data collector you want to configure.</p>
 </div>
-<div class="sect3">
-<h4 id="inventory">Inventory</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Problem:</th>
-<th class="tableblock halign-left valign-top">Try this:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Command missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that the user has permissions to run the commands noted below on the device<br>
-* Verify that the ceph adminstration tools are installed, please run the following command: rpm -q ceph-common.x86_64<br>
-* Verify credentials used in the wizard match device credentials</p></td>
+<div class="paragraph">
+<p>See the Data Collector Vendor Reference section of the documentation.</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid configuration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* Verify that the pools are configured in the system, try running the following command: ceph osd lspools -f json-pretty<br>
-* Verify credentials used in the wizard match device credentials</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create  Users Accounts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="concept_user_roles.html">Manage User Accounts</a></p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Additional information may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
-</div>
-</div>
-</div>
-</div>
 
         </article>
         <!-- Page Container -->
