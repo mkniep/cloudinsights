@@ -1231,7 +1231,7 @@
 <p class="page-details">
 
 
-<time datetime="2019-09-06 17:56:55 +0000">09/06/2019</time>
+<time datetime="2019-11-08 14:03:16 +0000">11/08/2019</time>
 
 
 <span>Contributors
@@ -1259,7 +1259,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Insights uses <a href="https://docs.influxdata.com/telegraf/v1.9/">Telegraf</a> as its agent for collection of integration data. Telegraf is a plugin-driven server agent that can be used to collect and report metrics, events, and logs. Input plugins are used to collect the desired information into the agent by accessing the system/OS directly, by calling third-party APIs, or by listening to configured streams (i.e. Kafka, statsD, etc). Output plugins are used to send the collected metric, events, and logs from the agent to Cloud Insights.</p>
+<p>Cloud Insights uses <a href="https://docs.influxdata.com/telegraf/v1.9/">Telegraf</a> as its agent for collection of integration data. Telegraf is a plugin-driven server agent that can be used to collect and report metrics, events, and logs. Input plugins are used to collect the desired information into the agent by accessing the system/OS directly, by calling third-party APIs, or by listening to configured streams (i.e. Kafka, statsD, etc). Output plugins are used to send the collected metrics, events, and logs from the agent to Cloud Insights.</p>
 </div>
 </div>
 </div>
@@ -1403,7 +1403,7 @@ Stop-Service telegraf</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Stop and Delete the Telegraf service:</p>
+<p>Stop and delete the Telegraf service:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Stop-Service telegraf
@@ -1413,6 +1413,37 @@ sc.exe delete telegraf</pre>
 </li>
 <li>
 <p>Delete the <em>C:\Program Files\telegraf</em> folder to remove the binary, logs, and configuration files</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrading-the-agent">Upgrading the Agent</h4>
+<div class="paragraph">
+<p>To upgrade the telegraf agent, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop and delete the telegraf service:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Stop-Service telegraf
+sc.exe delete telegraf</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the <em>SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf</em> key from the registry</p>
+</li>
+<li>
+<p>Delete <em>C:\Program Files\telegraf\telegraf.conf</em></p>
+</li>
+<li>
+<p>Delete <em>C:\Program Files\telegraf\telegraf.exe</em></p>
+</li>
+<li>
+<p><a href="#windows">Install the new agent</a>.</p>
 </li>
 </ol>
 </div>
@@ -1486,7 +1517,7 @@ sudo service telegraf stop</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Stop the Telegraf service using the following command:</p>
+<p>Stop the Telegraf service:</p>
 <div class="literalblock">
 <div class="content">
 <pre>systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
@@ -1495,7 +1526,7 @@ sudo service telegraf stop</pre>
 </div>
 </li>
 <li>
-<p>Remove the Telegraf package:</p>
+<p>Remove the Telegraf agent:</p>
 <div class="literalblock">
 <div class="content">
 <pre>yum remove telegraf</pre>
@@ -1510,6 +1541,36 @@ sudo service telegraf stop</pre>
 rm -rf /var/log/telegraf*</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrading-the-agent-2">Upgrading the Agent</h4>
+<div class="paragraph">
+<p>To upgrade the telegraf agent, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop the telegraf service:</p>
+<div class="literalblock">
+<div class="content">
+<pre>systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
+/etc/init.d/telegraf stop (for systems without systemd support)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the previous telegraf agent:</p>
+<div class="literalblock">
+<div class="content">
+<pre>yum remove telegraf</pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="#rhel-and-centos">Install the new agent</a>.</p>
 </li>
 </ol>
 </div>
@@ -1583,7 +1644,7 @@ sudo service telegraf stop</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Stop the Telegraf service using the following command:</p>
+<p>Stop the Telegraf service:</p>
 <div class="literalblock">
 <div class="content">
 <pre>systemctl stop telegraf (If your operating system is using systemd)
@@ -1592,7 +1653,7 @@ sudo service telegraf stop</pre>
 </div>
 </li>
 <li>
-<p>Remove the Telegraf package:</p>
+<p>Remove the Telegraf agent:</p>
 <div class="literalblock">
 <div class="content">
 <pre>dpkg -r telegraf</pre>
@@ -1607,6 +1668,36 @@ sudo service telegraf stop</pre>
 rm -rf /var/log/telegraf*</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrading-the-agent-3">Upgrading the Agent</h4>
+<div class="paragraph">
+<p>To upgrade the telegraf agent, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop the telegraf service:</p>
+<div class="literalblock">
+<div class="content">
+<pre>systemctl stop telegraf (If your operating system is using systemd)
+/etc/init.d/telegraf stop (for systems without systemd support)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the previous telegraf agent:</p>
+<div class="literalblock">
+<div class="content">
+<pre>dpkg -r telegraf</pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="#ubuntu-and-debian">Install the new agent</a>.</p>
 </li>
 </ol>
 </div>
@@ -1671,7 +1762,7 @@ sudo launchctl stop telegraf</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Stop the Telegraf service using the following command:</p>
+<p>Stop the Telegraf service:</p>
 <div class="literalblock">
 <div class="content">
 <pre>sudo launchctl stop telegraf</pre>
@@ -1683,15 +1774,11 @@ sudo launchctl stop telegraf</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Copy the Uninstall command to /tmp and execute it:</p>
+<p>Uninstall the telegraf agent:</p>
 <div class="literalblock">
 <div class="content">
-<pre>cp /Applications/telegraf.app/scripts/uninstall /tmp</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>sudo /tmp/uninstall</pre>
+<pre>cp /Applications/telegraf.app/scripts/uninstall /tmp
+sudo /tmp/uninstall</pre>
 </div>
 </div>
 </li>
@@ -1703,6 +1790,36 @@ sudo launchctl stop telegraf</pre>
 rm -rf /usr/local/var/log/telegraf.*</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrading-the-agent-4">Upgrading the Agent</h4>
+<div class="paragraph">
+<p>To upgrade the telegraf agent, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop the telegraf service:</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo launchctl stop telegraf</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Uninstall the previous telegraf agent:</p>
+<div class="literalblock">
+<div class="content">
+<pre>cp /Applications/telegraf.app/scripts/uninstall /tmp
+sudo /tmp/uninstall</pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="#macos">Install the new agent</a>.</p>
 </li>
 </ol>
 </div>
@@ -1845,7 +1962,7 @@ kubectl --namespace monitoring apply -f /tmp/telegraf-rs.yaml</pre>
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Create a temporary folder (for example, <em>/tmp/kube-state-yaml-files/</em>) and copy the .yaml files from <a href="https://github.com/kubernetes/kube-state-metrics/tree/master/kubernetes" class="bare">https://github.com/kubernetes/kube-state-metrics/tree/master/kubernetes</a> to this folder.</p>
+<p>Create a temporary folder (for example, <em>/tmp/kube-state-yaml-files/</em>) and copy the .yaml files from <a href="https://github.com/kubernetes/kube-state-metrics/tree/master/examples/standard" class="bare">https://github.com/kubernetes/kube-state-metrics/tree/master/examples/standard</a> to this folder.</p>
 </li>
 <li>
 <p>Run the following command to apply the .yaml files needed for installing kube-state-metrics:</p>
@@ -1921,29 +2038,34 @@ kubectl --namespace monitoring apply -f /tmp/telegraf-rs.yaml</pre>
 <div class="paragraph">
 <p>To uninstall the agent on Kubernetes, do the following:</p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>If the monitoring namespace is being used solely for Telegraf:</p>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>kubectl delete ns monitoring</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p>If the monitoring namespace is being used for other purposes in addition to Telegraf:</p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Stop and delete the Telegraf service:</p>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>kubectl --namespace monitoring delete ds telegraf-ds
 kubectl --namespace monitoring delete rs telegraf-rs</pre>
 </div>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Delete the Telegraf ConfigMap and ServiceAccount:</p>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>kubectl --namespace monitoring delete cm telegraf-conf
@@ -1951,14 +2073,65 @@ kubectl --namespace monitoring delete cm telegraf-conf-rs
 kubectl --namespace monitoring delete sa telegraf-user</pre>
 </div>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Delete the Telegraf ClusterRole and ClusterRolebinding:</p>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>kubectl --namespace monitoring delete clusterrole endpoint-access
 kubectl --namespace monitoring delete clusterrolebinding endpoint-access</pre>
 </div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrading-the-agent-5">Upgrading the Agent</h4>
+<div class="paragraph">
+<p>To upgrade the telegraf agent, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Remove the current the telegraf deployments:</p>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace monitoring delete ds telegraf-ds
+kubectl --namespace monitoring delete rs telegraf-rs</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the existing configurations:</p>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace monitoring get cm telegraf-conf -o yaml &gt; /tmp/telegraf-conf.yaml
+kubectl --namespace monitoring get cm telegraf-conf-rs -o yaml &gt; /tmp/telegraf-conf-rs.yaml</pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="#kubernetes">Install the new agent</a>.</p>
+</li>
+<li>
+<p>Re-apply the configurations:</p>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace monitoring apply -f /tmp/telegraf-conf.yaml --force
+kubectl --namespace monitoring apply -f /tmp/telegraf-conf-rs.yaml --force</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restart all telegraf pods. Run the following command for each telegraf pod:</p>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace monitoring delete pod &lt;Telegraf_pod&gt;</pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
