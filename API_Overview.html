@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Acquisition Unit Requirements | NetApp Cloud Docs</title>
+  <title>Cloud Insights API | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Acquisition Unit Requirements | NetApp Cloud Docs" />
+  <meta property="og:title" content="Cloud Insights API | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/us-en/concept_acquisition_unit_requirements.html" />
-	<meta property="og:description" content="The server or VM you use as your Acquisition Unit must meet minimum requirements" />
-  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/us-en/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/API_Overview.html" />
+	<meta property="og:description" content="" />
+  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,17 +17,17 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="The server or VM you use as your Acquisition Unit must meet minimum requirements">
-  <meta name="keywords" content=" AU, acquisition unit, RAU, requirements">
+  <meta name="description" content="">
+  <meta name="keywords" content=" API, customer API,  premium">
   
   
 
   <!-- Icons -->
-  <link rel="icon" href="/cloudinsights/us-en/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/cloudinsights/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/us-en/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -36,23 +36,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/esb.min.css">
-  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc.css">
-  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc-components.css">
+  <link rel="stylesheet" href="/cloudinsights/common/css/esb.min.css">
+  <link rel="stylesheet" href="/cloudinsights/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/cloudinsights/common/css/doc.css">
+  <link rel="stylesheet" href="/cloudinsights/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/cloudinsights/us-en/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/cloudinsights/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/cloudinsights/us-en/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/cloudinsights/us-en/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/cloudinsights/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/cloudinsights/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/cloudinsights/us-en/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/cloudinsights/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/css/netapp.css' type='text/css'>
 
   
 
@@ -61,23 +61,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/cloudinsights/us-en/js/na-search.js'></script>
+    <script src='/cloudinsights/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/cloudinsights/us-en/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/cloudinsights/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/cloudinsights/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/css/prism-netapp.css' type='text/css'>
 
-  <script src='/cloudinsights/us-en/js/clouddocs.js'></script>
-  <script src='/cloudinsights/us-en/js/s_code_impl.js'></script>
-  <script src='/cloudinsights/us-en/js/jquery.navgoco.min.js'></script>
+  <script src='/cloudinsights/js/clouddocs.js'></script>
+  <script src='/cloudinsights/js/s_code_impl.js'></script>
+  <script src='/cloudinsights/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/cloudinsights/us-en/js/toc.js'></script>
-  <script src='/cloudinsights/us-en/js/customscripts.js'></script>
+  <script src='/cloudinsights/js/toc.js'></script>
+  <script src='/cloudinsights/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -194,7 +194,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/cloudinsights/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -202,11 +202,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -226,7 +226,7 @@
               <span class="ie-i18n-lang">English</span>
               <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                 <title>globe</title>
-                <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                <use xlink:href="/cloudinsights/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
               </svg>
             </a>
           </li>
@@ -322,7 +322,7 @@
   
 
   
-    <li class="active"><a href="concept_acquisition_unit_requirements.html">Acquisition Unit Requirements</a></li>
+    <li><a href="concept_acquisition_unit_requirements.html">Acquisition Unit Requirements</a></li>
   
 
   
@@ -1218,11 +1218,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Acquisition Unit Requirements
+  <h1 class="n-doc__component-detail-heading">Cloud Insights API
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/concept_acquisition_unit_requirements.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Acquisition Unit Requirements](https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/API_Overview.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Cloud Insights API](https://docs.netapp.com/us-en/cloudinsights/API_Overview.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -1231,16 +1231,16 @@
 <p class="page-details">
 
 
-<time datetime="2019-05-31 17:41:13 +0000">05/31/2019</time>
+<time datetime="2019-11-11 18:35:41 +0000">11/11/2019</time>
 
 
 <span>Contributors
   
-  <a target="_blank" href="https://github.com/netapp-alavoie">
+  <a target="_blank" href="https://github.com/dgracenetapp">
     <img  class="avatar avatar-small"
-          alt="netapp-alavoie"
+          alt="dgracenetapp"
           width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/39956590?v=4"
+          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1248,86 +1248,298 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>You must install an Acquisition Unit (AU) in order to acquire information from your data collectors. Before you install the Acquisition Unit, you should ensure that your environment meets operating system, CPU, memory, and disk space requirements.</p>
+<p>The Cloud Insights API allows customers to implement business workflows using data collected by Cloud Insights.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requirements-for-customer-api-access">Requirements for Customer API access:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An API Access Token model is used to grant access. Each token is void of a username or password.</p>
+</li>
+<li>
+<p>API Token management is performed by Cloud Insights users with the Administrator role.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integrating-cloud-insights-with-other-tools">Integrating Cloud Insights With Other Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights is an extensible (wide open) solution allowing for Integrations with 3rd party orchestration, business management, change control and ticketing systems as well as custom CMDB integrations. Cloud Insight’s fully published RESTful API and open MySQL database are primary points of integration that allow simple and effective movement of data and allow users to gain seamless access to their data</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="allocating-resources-to-business-units-or-departments">Allocating Resources to Business Units or Departments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights incorporates a method of metadata tagging called Annotations. Business Units, Lines of Business, Tenants, and Projects can be assigned to data center resources for richer business context around assets, capacity planning, troubleshooting and reporting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-return-style">API return style</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="categories">Categories</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Component</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Linux Requirement</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Requirement</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Operating system</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A computer running a licensed version of one of the following:<br>
-<br>
-* CentOS 7.2 64-bit<br>
-* CentOS 7.3 64-bit<br>
-* CentOS 7.4 64-bit<br>
-* CentOS 7.5 64-bit<br>
-* CentOS 7.6 64-bit<br>
-* Debian 9 64-bit<br>
-* Oracle Enterprise Linux 7.5 64 bit<br>
-* Red Hat Enterprise Linux 7.2 64-bit<br>
-* Red Hat Enterprise Linux  7.3 64-bit<br>
-* Red Hat Enterprise Linux  7.4 64-bit<br>
-* Red Hat Enterprise Linux  7.5 64-bit<br>
-* Red Hat Enterprise Linux  7.6 64-bit<br>
-* Ubuntu Server 18.04 LTS<br>
-<br>
-This computer should be running no other application-level software. A dedicated server is recommended.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A computer running a licensed version of one of the following:<br>
-<br>
-* Microsoft Windows 10 64-bit<br>
-* Microsoft Windows Server 2008 R2<br>
-* Microsoft Windows Server 2012<br>
-* Microsoft Windows Server 2012 R2<br>
-* Microsoft Windows Server 2016<br>
-* Microsoft Windows Server 2019<br>
-<br>
-This computer should be running no other application-level software. A dedicated server is recommended.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CPU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 CPU cores</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Memory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8 GB RAM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Available disk space</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">50 GB<br>
-For Linux, disk space should be allocated in this manner:<br>
-/opt/netapp 25 GB<br>
-/var/log/netapp 25 GB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">50 GB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Network</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">100 Mbps /1 Gbps Ethernet connection, static IP address, IP connectivity to all FC devices, and a required port to the Cloud Insights instance (80 or 443).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Permissions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sudo permissions on the Acquisition Unit server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator permissions on the Acquisition Unit server</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Virus Scan</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">During installation, you must completely disable all virus scanners. Following installation, the paths used by the Acquisition Unit software must be excluded from virus scanning.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VARCHAR(1023)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The categories allowed for API key access. Comma-separated string value. Only when the categories defined by method matches the value here, the access is permitted.</p>
+<p class="tableblock">The initial set is ALL, DATA_COLLECTION, ASSETS.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples">Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Model properties:
+{
+id: long
+name: string
+simpleName: string
+priority: 'Critical' or 'High' or 'Medium' or 'Low'
+ businessEntity: BusinessEntity
+ isBusinessEntityDefault: boolean
+ ignoreShareViolations: boolean
+}</p>
+</div>
+<div class="paragraph">
+<p>Expand properties:
+{
+ _expands: Map[string, ModelExpand]
+ computeResources: List[ComputeResource]
+ storageResources: List[StorageResource]
+ performance: ApplicationPerformance
+ml
+keywords: API, customer API,  premium
+---</p>
+</div>
+</div>
+</div>
+<h1 id="cloud-insights-api" class="sect0">Cloud Insights API</h1>
+<div class="paragraph lead">
+<p>The Cloud Insights API allows customers to implement business workflows using data collected by Cloud Insights.</p>
+</div>
+<div class="sect1">
+<h2 id="requirements-for-customer-api-access-2">Requirements for Customer API access:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An API Access Token model is used to grant access. Each token is void of a username or password.</p>
+</li>
+<li>
+<p>API Token management is performed by Cloud Insights users with the Administrator role.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integrating-cloud-insights-with-other-tools-2">Integrating Cloud Insights With Other Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights is an extensible (wide open) solution allowing for Integrations with 3rd party orchestration, business management, change control and ticketing systems as well as custom CMDB integrations. Cloud Insight’s fully published RESTful API and open MySQL database are primary points of integration that allow simple and effective movement of data and allow users to gain seamless access to their data</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="allocating-resources-to-business-units-or-departments-2">Allocating Resources to Business Units or Departments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights incorporates a method of metadata tagging called Annotations. Business Units, Lines of Business, Tenants, and Projects can be assigned to data center resources for richer business context around assets, capacity planning, troubleshooting and reporting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-return-style-2">API return style</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="categories-2">Categories</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VARCHAR(1023)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The categories allowed for API key access. Comma-separated string value. Only when the categories defined by method matches the value here, the access is permitted.</p>
+<p class="tableblock">The initial set is ALL, DATA_COLLECTION, ASSETS.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples-2">Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Model properties:
+{
+id: long
+name: string
+simpleName: string
+priority: 'Critical' or 'High' or 'Medium' or 'Low'
+ businessEntity: BusinessEntity
+ isBusinessEntityDefault: boolean
+ ignoreShareViolations: boolean
+}</p>
+</div>
+<div class="paragraph">
+<p>Expand properties:
+{
+ _expands: Map[string, ModelExpand]
+ computeResources: List[ComputeResource]
+ storageResources: List[StorageResource]
+ performance: ApplicationPerformance
+}</p>
+</div>
+<div class="paragraph">
+<p>permalink: API_Overview.html
+keywords: API, customer API,  premium
+---</p>
+</div>
+</div>
+</div>
+<h1 id="cloud-insights-api-2" class="sect0">Cloud Insights API</h1>
+<div class="paragraph lead">
+<p>The Cloud Insights API allows customers to implement business workflows using data collected by Cloud Insights.</p>
+</div>
+<div class="sect1">
+<h2 id="requirements-for-customer-api-access-3">Requirements for Customer API access:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An API Access Token model is used to grant access. Each token is void of a username or password.</p>
+</li>
+<li>
+<p>API Token management is performed by Cloud Insights users with the Administrator role.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="integrating-cloud-insights-with-other-tools-3">Integrating Cloud Insights With Other Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights is an extensible (wide open) solution allowing for Integrations with 3rd party orchestration, business management, change control and ticketing systems as well as custom CMDB integrations. Cloud Insight’s fully published RESTful API and open MySQL database are primary points of integration that allow simple and effective movement of data and allow users to gain seamless access to their data</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="allocating-resources-to-business-units-or-departments-3">Allocating Resources to Business Units or Departments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights incorporates a method of metadata tagging called Annotations. Business Units, Lines of Business, Tenants, and Projects can be assigned to data center resources for richer business context around assets, capacity planning, troubleshooting and reporting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-return-style-3">API return style</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="categories-3">Categories</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VARCHAR(1023)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The categories allowed for API key access. Comma-separated string value. Only when the categories defined by method matches the value here, the access is permitted.</p>
+<p class="tableblock">The initial set is ALL, DATA_COLLECTION, ASSETS.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples-3">Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Model properties:
+{
+id: long
+name: string
+simpleName: string
+priority: 'Critical' or 'High' or 'Medium' or 'Low'
+ businessEntity: BusinessEntity
+ isBusinessEntityDefault: boolean
+ ignoreShareViolations: boolean
+}</p>
+</div>
+<div class="paragraph">
+<p>Expand properties:
+{
+ _expands: Map[string, ModelExpand]
+ computeResources: List[ComputeResource]
+ storageResources: List[StorageResource]
+ performance: ApplicationPerformance
+}</p>
+</div>
+</div>
+</div>
 
         </article>
         <!-- Page Container -->
@@ -1367,7 +1579,7 @@ For Linux, disk space should be allocated in this manner:<br>
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -1376,7 +1588,7 @@ For Linux, disk space should be allocated in this manner:<br>
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -1386,7 +1598,7 @@ For Linux, disk space should be allocated in this manner:<br>
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -1395,7 +1607,7 @@ For Linux, disk space should be allocated in this manner:<br>
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -1416,15 +1628,15 @@ For Linux, disk space should be allocated in this manner:<br>
 
     </div>
 
-    <script src="/cloudinsights/us-en/common/js/components.js"></script>
-    <script src="/cloudinsights/us-en/common/js/doc-components.js"></script>
+    <script src="/cloudinsights/common/js/components.js"></script>
+    <script src="/cloudinsights/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/cloudinsights/us-en/js/bundle.js'></script>
+    <script type="text/javascript" src='/cloudinsights/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/cloudinsights/us-en/js/prism.js'></script>
-    <script type="text/javascript" src='/cloudinsights/us-en/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/cloudinsights/js/prism.js'></script>
+    <script type="text/javascript" src='/cloudinsights/js/prism-curl.js'></script>
 
   </body>
 
