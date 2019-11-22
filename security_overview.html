@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>IBM System Storage DS8000 Series data collector | NetApp Cloud Docs</title>
+  <title>Cloud Insights Security | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="IBM System Storage DS8000 Series data collector | NetApp Cloud Docs" />
+  <meta property="og:title" content="Cloud Insights Security | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_dc_ibm_ds.html" />
-	<meta property="og:description" content="Configuring System Storage DS8000 Series data collector." />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/security_overview.html" />
+	<meta property="og:description" content="Cloud Insights follows security best practices throughout the release life cycle." />
   <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Configuring System Storage DS8000 Series data collector.">
-  <meta name="keywords" content=" data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS">
+  <meta name="description" content="Cloud Insights follows security best practices throughout the release life cycle.">
+  <meta name="keywords" content=" security, risk, protection">
   
   
 
@@ -304,7 +304,7 @@
   
 
   
-    <li><a href="security_overview.html">Security</a></li>
+    <li class="active"><a href="security_overview.html">Security</a></li>
   
 
   
@@ -570,7 +570,7 @@
   
 
   
-    <li class="active"><a href="task_dc_ibm_ds.html">System Storage DS8000 Series</a></li>
+    <li><a href="task_dc_ibm_ds.html">System Storage DS8000 Series</a></li>
   
 
   
@@ -1222,11 +1222,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">IBM System Storage DS8000 Series data collector
+  <h1 class="n-doc__component-detail-heading">Cloud Insights Security
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_dc_ibm_ds.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[IBM System Storage DS8000 Series data collector](https://docs.netapp.com/us-en/cloudinsights/task_dc_ibm_ds.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/security_overview.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Cloud Insights Security](https://docs.netapp.com/us-en/cloudinsights/security_overview.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -1234,7 +1234,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-06-28 19:48:59 +0000">06/28/2019</time>
+<time datetime="2019-11-12 20:23:31 +0000">11/12/2019</time>
 
 
 <span>Contributors
@@ -1254,204 +1254,98 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>The IBM DS (CLI) data collector supports inventory and performance data acquisition for DS6xxx and DS8xxx devices.</p>
+<p>Product and customer data security is of utmost importance at NetApp. Cloud Insights follows security best practices throughout the release life cycle to make sure customer information and data is secured in the best possible way.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="physical-security">Physical security</h3>
+<div class="paragraph">
+<p>The Cloud Insights production infrastructure is hosted in Amazon Web Services (AWS). Physical and environmental security-related controls for Cloud Insights production servers, which include buildings as well as locks or keys used on doors, are managed by AWS. As per AWS: “Physical access is controlled both at the perimeter and at building ingress points by professional security staff utilizing video surveillance, intrusion detection systems, and other electronic means. Authorized staff utilize multi-factor authentication mechanisms to access data center floors.”</p>
 </div>
 <div class="paragraph">
-<p>DS3xxx, DS4xxx, and DS5xxx devices are supported by the <a href="task_dc_na_eseries.html">NetApp E-Series data collector</a>. You should refer to the Cloud Insights support matrix for supported models and firmware versions.</p>
+<p>Cloud Insights follows the best practices of the <a href="https://aws.amazon.com/compliance/shared-responsibility-model/">Shared Responsibility model</a> described by AWS.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="terminology">Terminology</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="product-security">Product security</h3>
 <div class="paragraph">
-<p>Cloud Insights acquires the following inventory information from the IBM DS data collector. For each asset type acquired by Cloud Insights, the most common terminology used for this asset is shown. When viewing or troubleshooting this data collector, keep the following terminology in mind:</p>
+<p>Cloud Insights follows a development lifecycle in line with Agile principles, thus allowing us to address any security-oriented software defects more rapidly, compared to longer release cycle development methodologies. Using continuous integration methodologies, we are able to rapidly respond to both functional and security changes. The change management procedures and policies define when and how changes occur and help to maintain the stability of the production environment. Any impactful changes are formally communicated, coordinated, properly reviewed, and approved prior to their release into the production environment.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Vendor/Model Term</th>
-<th class="tableblock halign-left valign-top">Cloud Insights Term</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disk Drive Module</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disk</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Image</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extent Pool</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Node</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed Block Volume</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Volume</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Host FC Initiator (Mapped)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Volume Mask</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="sect2">
+<h3 id="network-security">Network security</h3>
 <div class="paragraph">
-<p>Note: These are common terminology mappings only and might not represent every case for this data collecor.</p>
+<p>Network access to resources in the Cloud Insights environment is controlled by host-based firewalls. Each resource (such as a load balancer or virtual machine instance) has a host-based firewall that restricts inbound traffic to only the ports needed for that resource to perform its function.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements">Requirements</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>You need the following to configure this data collector:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>IP address of each DS array</p>
-</li>
-<li>
-<p>Read-only username and password on each DS array</p>
-</li>
-<li>
-<p>Third-party software installed on the Cloud Insights AU: IBM <em>dscli</em></p>
-</li>
-<li>
-<p>Access validation: Run <em>dscli</em> commands using the username and password</p>
-</li>
-<li>
-<p>Port requirements: 80, 443, &amp; 1750</p>
-</li>
-</ul>
+<p>Cloud Insights uses various mechanisms including intrusion detection services to monitor the production environment for security anomalies.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="configuration">Configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DS Storage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address or fully-qualified domain name of the DS device</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User name for the DS CLI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password for the DS CLI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>dscli</em> executable path</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Full path to the <em>dscli</em> executable</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="advanced-configuration">Advanced configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inventory Poll Interval (min)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval between inventory polls (min). The default is 40.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Display Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the IBM DS storage array</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inventory Exclude Devices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of device serial numbers to exclude from inventory collection</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance Poll Interval (sec)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The default is 300.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance Filter Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Include: Data collected only from devices on list. Exclude: No data from these devices is collected</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance Filter Device List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of device IDs to include or exclude from performance collection</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="risk-assessment">Risk Assessment</h3>
 <div class="paragraph">
-<p>Some things to try if you encounter problems with this data collector:</p>
+<p>Cloud Insights team follows a formalized Risk Assessment process to provide a systematic, repeatable way to identify and assess the risks so that they can be appropriately managed through a Risk Treatment Plan.</p>
 </div>
-<div class="sect3">
-<h4 id="inventory">Inventory</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Problem:</th>
-<th class="tableblock halign-left valign-top">Try this:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error containing: CMUC00192E, CMUC00191E or CMUC00190E</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* Verify credentials and IP address entered.<br>
-* Try to communicate with the array through web management console <a href="https://${ip}:8452/DS8000/Console" class="bare">https://${ip}:8452/DS8000/Console</a>.  Replace the ${ip} with data collector configured IP.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error:<br>
-* Cannot run program<br>
-* Error executing command</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* From Cloud Insights Acquisition Unit Open a CMD<br>
-* Open CLI.CFG file in CLI&#8217;s home dir/lib and check property JAVA_INSTALL, edit the value to match your environment<br>
-* Display Java version installed on this machine, typing: "java -version"<br>
-* Ping the IP address of the IBM Storage device specified in CLI command issued.<br>
-* If all the above worked fine then manually run a CLI command</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="sect2">
+<h3 id="data-protection">Data protection</h3>
 <div class="paragraph">
-<p>Additional information may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
+<p>The Cloud Insights production environment is set up in a highly redundant infrastructure utilizing multiple availability zones for all services and components. Along with utilizing a highly available and redundant compute infrastructure, critical data is backed up at regular intervals and restores are periodically tested. Formal backup policies and procedures minimize the impact of interruptions of business activities and protects business processes against the effects of failures of information systems or disasters and ensures their timely and adequate resumption.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="authentication-and-access-management">Authentication and access management</h3>
+<div class="paragraph">
+<p>All customer access to Cloud Insights is done via browser UI interactions over. Authentication is accomplished via the 3rd party service, Auth0. NetApp has centralized on this as the authentication layer for all Cloud Data services.</p>
+</div>
+<div class="paragraph">
+<p>Cloud Insights follows industry best practices including “Least Privilege” and “Role-based access control” around logical access to the Cloud Insights production environment. Access is controlled on a strict need basis and is only granted for select authorized personnel using multi-factor authentication mechanisms.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="collection-and-protection-of-customer-data">Collection and protection of customer data</h3>
+<div class="paragraph">
+<p>All customer data is encrypted in transit across public networks and encrypted at rest. Cloud Insights utilizes encryption at various points in the system to protect customer data using technologies that includes Transport Layer Security (TLS) and the industry-standard AES-256 algorithm.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="customer-deprovisioning">Customer deprovisioning</h3>
+<div class="paragraph">
+<p>Email notifications are sent out at various intervals to inform the customer their subscription is expiring. Once the subscription has expired, the UI is restricted and a grace period begins for data collection. The customer is then notified via email. Trial subscriptions have a 14-day grace period and paid subscription accounts have a 28-day grace period. After the grace period has expired, the customer is notified via email that the account will be deleted in 2 days. A paid customer can also request directly to be off the service.</p>
+</div>
+<div class="paragraph">
+<p>Expired tenants and all associated customer data are deleted by the Cloud Insights Operations (SRE) team at the end of the grace period or upon confirmation of a customer’s request to terminate their account. In either case, the SRE team runs an API call to delete the account. The API call deletes the tenant instance and all customer data. Customer deletion is verified by calling the same API and verifying that the customer tenant status is “DELETED.”</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="security-incident-management">Security incident management</h3>
+<div class="paragraph">
+<p>Cloud Insights is integrated with NetApp&#8217;s Product Security Incident Response Team (PSIRT) process to find, assess, and resolve known vulnerabilities. PSIRT intakes vulnerability information from multiple channels including customer reports, internal engineering, and widely recognized sources such as the CVE database.</p>
+</div>
+<div class="paragraph">
+<p>If an issue is detected by the Cloud Insights engineering team, the team will initiate the PSIRT process, assess, and potentially remediate the issue.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible that a Cloud Insights customer or researcher may identify a security issue with the Cloud Insights product and report the issue to Technical Support or directly to NetApp&#8217;s incident response team. In these cases, the Cloud Insights team will initiate the PSIRT process, assess, and potentially remediate the issue.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="vulnerability-and-penetration-testing">Vulnerability and Penetration testing</h3>
+<div class="paragraph">
+<p>Cloud Insights follows industry best practices and performs regular vulnerability and penetration testing using internal and external security professionals and companies.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="security-awareness-training">Security awareness training</h3>
+<div class="paragraph">
+<p>All Cloud Insights personnel undergo security training, developed for individual roles, to make sure each employee is equipped to handle the specific security-oriented challenges of their roles.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compliance">Compliance</h3>
+<div class="paragraph">
+<p>Cloud Insights performs independent third-party Audit and validations from external Licensed CPA firm of its security, processes, and services, including completion of the SOC 2 Audit.</p>
 </div>
 </div>
 
