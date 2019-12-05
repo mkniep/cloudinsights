@@ -18,7 +18,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="Cloud Insights provides multiple user accounts with different permission levels.">
-  <meta name="keywords" content=" roles, users, guest, user, administrator">
+  <meta name="keywords" content=" roles, guest, user, administrator, SSO, Federate">
   
   
 
@@ -1234,24 +1234,24 @@
 
 <p class="page-details">
 
-<time datetime="2019-12-04 21:30:49 +0000">12/04/2019</time>
+<time datetime="2019-12-05 18:16:08 +0000">12/05/2019</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/netapp-alavoie">
     <img  class="avatar avatar-small"
           alt="netapp-alavoie"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/39956590?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dgracenetapp">
+    <img  class="avatar avatar-small"
+          alt="dgracenetapp"
+          width="20" height="20"
+          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1262,7 +1262,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Insights provides four user accounts, Account Owner, Administrator, User, and Guest. Each account is assigned specific permission levels.</p>
+<p>Cloud Insights provides four user accounts: Account Owner, Administrator, User, and Guest. Each account is assigned specific permission levels. Users are either <a href="#creating-accounts-by-inviting-users">invited</a> to Cloud Insights and assigned a specific role, or can sign in via <a href="#single-sign-on-(sso)-accounts">Single Sign-On (SSO)</a> with a default role. SSO is available as a feature in Cloud Insights Premium Edition.</p>
 </div>
 </div>
 </div>
@@ -1271,20 +1271,20 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>You use an account that has Administrator privileges to create or modify user accounts. Each user account is assigned one of the following permission levels.<br>
-* Guest can view asset pages, dashboards, queries and run queries.<br>
-* User can perform all guest-level privileges, and create, modify or delete, dashboards, queries, annotations, annotation rules, and applications.  Users cannot create modify or delete policies.<br>
-* Admins and Account Owner can perform all functions including adding new users and managing data collectors.</p>
+* <strong>Guest</strong> can view asset pages, dashboards, and queries, and run queries.<br>
+* <strong>User</strong> can perform all guest-level privileges as well as create, modify, or delete dashboards, queries, annotations, annotation rules, and applications. Users cannot create, modify, or delete policies.<br>
+* <strong>Administrator</strong> and <strong>Account Owner</strong> can perform all functions including adding new users and managing data collectors.</p>
 </div>
 <div class="paragraph">
 <p>The Account Owner is created when you register for Cloud Insights.</p>
 </div>
 <div class="paragraph">
-<p>Best practice is to limit the number of users with Administrator permissions.  The greatest number of accounts should be user or guest accounts.</p>
+<p>Best practice is to limit the number of users with Administrator permissions. The greatest number of accounts should be user or guest accounts.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="creating-user-accounts">Creating user accounts</h2>
+<h2 id="creating-accounts-by-inviting-users">Creating Accounts by Inviting Users</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Creating a new user account is achieved through Cloud Central. A user can respond to the invitation sent through email, but if the user does not have an account with Cloud Central, the user needs to sign up with Cloud Central so that they can accept the invitation.</p>
@@ -1310,7 +1310,7 @@
 <p>Log into Cloud Insights</p>
 </li>
 <li>
-<p>In the menu, click <strong>Admin &gt; Account Manager</strong></p>
+<p>In the menu, click <strong>Admin &gt; User Management</strong></p>
 <div class="paragraph">
 <p>The User Management screen is displayed. The screen contains a list of all of the accounts on the system.</p>
 </div>
@@ -1318,7 +1318,7 @@
 <li>
 <p>Click <strong>+ User</strong></p>
 <div class="paragraph">
-<p>The Invite User screen is displayed.</p>
+<p>The <strong>Invite User</strong> screen is displayed.</p>
 </div>
 </li>
 <li>
@@ -1341,6 +1341,56 @@ If they have an existing account for that email address, they can simply sign in
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="single-sign-on-sso-accounts">Single Sign-On (SSO) Accounts</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This documentation is Preview documentation. Information and instructions are subject to change.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In addition to inviting users, administrators can enable <strong>Single Sign-On</strong> (SSO) access to Cloud Insights for all users in their corporate domain, without having to invite them individually. With SSO enabled, any user with the same domain email address can log into Cloud Insights.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+SSO is available in Cloud Insights Premium Edition, and must be configured before it can be enabled for Cloud Insights. SSO configuration includes <a href="https://services.cloud.netapp.com/misc/federation-support">Identity Federation</a> through NetApp Cloud Central. Federation allows single sign-on users to access your NetApp Cloud Central accounts using credentials from your corporate directory, using open standards such as Security Assertion Markup Language 2.0 (SAML) and OpenID Connect (OIDC).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To configure SSO, on the <strong>Admin &gt; User Management</strong> page, click the <strong>Configure SSO</strong> button. Once configured, administrators can then enable SSO user login. When an administrator enables SSO, they choose a default role for all SSO users (such as Guest or User). Users who log in through SSO will have that default role.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/SSOBanner.jpg" alt="User Management with SSO"></span></p>
+</div>
+<div class="paragraph">
+<p>Occasionally, an administrator will want to promote a single user out of the default SSO role (for example, to make them an administrator). They can accomplish this on the <strong>Admin &gt; User Management</strong> page by clicking on the right-side menu for the user and selecting <em>Assign Role</em>. Users who are assigned an explicit role in this way continue to have access to Cloud Insights even if SSO is subsequently disabled.</p>
+</div>
+<div class="paragraph">
+<p>If the user no longer requires the elevated role, you can click the menu to <em>Remove User</em>. The user will be removed from the list. If SSO is enabled, the user can continue log in to Cloud Insights through SSO, with the default role.</p>
+</div>
+<div class="paragraph">
+<p>You can choose to hide SSO users by unchecking the <strong>Show SSO Users</strong> checkbox.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/UserListWithSSO.png" alt="SSO Enabled"></span></p>
 </div>
 </div>
 </div>
