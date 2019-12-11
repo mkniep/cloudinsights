@@ -1237,7 +1237,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-12-11 15:43:39 +0000">12/11/2019</time>
+<time datetime="2019-12-11 18:55:14 +0000">12/11/2019</time>
 
 
 <span>Contributors
@@ -1369,42 +1369,38 @@ You can get the tenant ID from the product URL. For example: <a href="https://ab
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 37.5%;">
-<col style="width: 62.5%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Protocol</th>
 <th class="tableblock halign-left valign-top">Port</th>
+<th class="tableblock halign-left valign-top">Destination</th>
+<th class="tableblock halign-left valign-top">Direction</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Destination</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Direction</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">443</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;tenant id&gt;.cs01.cloudinsights.netapp.com<br>
 &lt;tenant id&gt;.c01.cloudinsights.netapp.com<br>
 &lt;tenant id&gt;.c02.cloudinsights.netapp.com</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outbound</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Access to Cloud Insights</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">443</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">gateway.c01.cloudinsights.netapp.com<br>
 agentlogin.cs01.cloudinsights.netapp.com</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outbound</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access to authentication services</p></td>
 </tr>
 </tbody>
 </table>
@@ -1415,63 +1411,49 @@ agentlogin.cs01.cloudinsights.netapp.com</p></td>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 37.5%;">
-<col style="width: 62.5%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Protocol</th>
 <th class="tableblock halign-left valign-top">Port</th>
+<th class="tableblock halign-left valign-top">Destination</th>
+<th class="tableblock halign-left valign-top">Direction</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Destination</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Direction</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">389(LDAP)<br>
 636 (LDAPs / start-tls)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LDAP Server URL</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outbound</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connect to LDAP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">443</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SVM Management IP Address</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outbound</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API communication with ONTAP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">35000 - 55000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SVM data LIF IP Addresses</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inbound/Outbound</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Communication with ONTAP for Fpolicy events</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">35000 - 55000</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TODO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inbound &amp; Outbound</p></td>
-</tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><a href="&lt;task_cs_add_agent&gt;.html">Configure an Agent</a></p>
+</div>
 </div>
 </div>
 
