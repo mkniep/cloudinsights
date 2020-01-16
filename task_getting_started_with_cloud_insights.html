@@ -1244,7 +1244,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-09-10 20:56:07 +0000">09/10/2019</time>
+<time datetime="2020-01-03 18:19:42 +0000">01/03/2020</time>
 
 
 <span>Contributors
@@ -1257,14 +1257,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 </p>
@@ -1274,22 +1266,6 @@
 <div class="paragraph">
 <p>After you have signed up for Cloud Insights and log in to your environment for the first time, you will be guided through the following steps in order to begin collecting and managing data.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="see-how-it-works">See How It Works</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The first thing you see after logging in the first time is a short video explaining how Cloud Insights collects data.</p>
-</div>
-<div class="paragraph">
-<p>When you are finished watching the video, click <strong>Continue</strong> to proceed to the next step.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="select-a-data-collector">Select a Data Collector</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Data collectors discover information from your data sources, such as storage devices, network switches, and virtual machines. The information gathered is used for analysis, validation, monitoring and troubleshooting.</p>
 </div>
@@ -1310,7 +1286,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Select your first data collector from the supported vendors and models available. You will be taken to the next step.</p>
+<p>Select your first data collector from the supported vendors and models available. You can easily add additional data collectors later.</p>
 </div>
 </div>
 </div>
@@ -1320,12 +1296,18 @@
 <div class="paragraph">
 <p>If you selected an <em>Infrastructure</em> data collector, an Acquisition Unit is required to inject data into Cloud Insights. You will need to download and install the Acquisition Unit software on a server or VM to collect data for Cloud Insights. A single Acquisition Unit can be used for multiple data collectors.</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/NewLinuxAUInstall.png" alt="Linux AU Instructions"></span></p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Follow the <a href="task_configure_acquisition_unit.html">instructions</a> displayed to install your Acquisition Unit.</p>
+<p>Follow the <a href="task_configure_acquisition_unit.html">instructions</a> displayed to install your Acquisition Unit. Once the Acquisition Unit software is installed, the Continue button is displayed and you can proceed to the next step.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/NewAUDetected.png" alt="New AU Detected"></span></p>
 </div>
 <div class="paragraph">
 <p>You may set up additional acquisition units later if needed. For example, you may want different Acquisition Units collecting information from data centers in different regions.</p>
@@ -1375,13 +1357,10 @@ The agent also collects data from the host itself, for use in Cloud Insights. Th
 <div class="ulist">
 <ul>
 <li>
-<p>Choose an <a href="concept_agent_access_key.html">Agent Access Key</a>. Data Collectors can be grouped by using different Keys for different groupings (by location or platform, for example).</p>
-</li>
-<li>
 <p>Open a terminal or command window on the agent host or VM, and paste the displayed command to install the agent.</p>
 </li>
 <li>
-<p>When installation is complete, click <strong>Finish</strong>.</p>
+<p>When installation is complete, click <strong>Complete Setup</strong>.</p>
 </li>
 </ul>
 </div>
@@ -1406,7 +1385,7 @@ The agent also collects data from the host itself, for use in Cloud Insights. Th
 <p>Follow the instructions to configure the data collector.</p>
 </li>
 <li>
-<p>When configuration is complete, click <strong>Finish</strong>.</p>
+<p>When configuration is complete, click <strong>Complete Setup</strong>.</p>
 </li>
 </ul>
 </div>
@@ -1417,21 +1396,10 @@ The agent also collects data from the host itself, for use in Cloud Insights. Th
 <h2 id="add-dashboards">Add Dashboards</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Depending on the type of initial data collector you selected to configure (storage, switch, etc.), you will be presented with a list of example dashboards from which to choose. Select one or more dashboards from the Dashboard Gallery and click <strong>Add Dashboards</strong>.</p>
-</div>
-<div class="paragraph">
-<p>The first dashboard in your selected dashboards list will be set as your environment&#8217;s <a href="concept_dashboards_overview.html#setting-a-dashboard-as-your-home-page">home page</a>. You can change the home page from the <strong>Dashboards &gt; Show All Dashboards</strong> list.</p>
+<p>Depending on the type of initial data collector you selected to configure (storage, switch, etc.), one or more relevant dashboards will be imported. For example, if you configured a storage data collector, a set of storage-related dashboards will be imported, and one will be set as your Cloud Insights Home Page. You can change the home page from the <strong>Dashboards &gt; Show All Dashboards</strong> list.</p>
 </div>
 <div class="paragraph">
 <p>You can import additional dashboards later, or <a href="concept_dashboards_overview.html">create your own</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="invite-users">Invite Users</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>At any point during the onboarding process, you can click on <strong>Admin &gt; User Management &gt; +User</strong> to <a href="concept_user_roles.html">invite additional users</a> to your Cloud Insights environment. Only Administrator users can access Cloud Insights until onboarding is complete.</p>
 </div>
 </div>
 </div>
@@ -1454,17 +1422,20 @@ Please allow up to 30 minutes for your dashboards to start displaying data. Some
 </table>
 </div>
 <div class="paragraph">
-<p>If your initial setup process is interrupted (for example, if you close the browser window), you may need to start the process again from the beginning.</p>
+<p>If your initial setup process is interrupted (for example, if you close the browser window), you will need to follow the steps manually:</p>
 </div>
-<div class="paragraph">
-<p>Related topics:<br>
-Data collector <a href="https://docs.netapp.com/us-en/cloudinsights/task_configure_data_collectors.html"><strong>configuration</strong></a><br>
-Vendor-specific <a href="concept_data_collector_reference.html"><strong>Data Collector reference</strong></a><br>
-Troubleshooting <a href="task_research_failed_collector.html"><strong>Data Collector failures</strong></a><br>
-Data Collector <a href="reference_data_collector_support_matrix.html"><strong>support matrix</strong></a></p>
-</div>
-<div class="paragraph">
-<p>Services data collector reference [TBD]</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose a Data Collector</p>
+</li>
+<li>
+<p>Install an Agent or Acquisition Unit if prompted</p>
+</li>
+<li>
+<p>Configure the Data Collector</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
