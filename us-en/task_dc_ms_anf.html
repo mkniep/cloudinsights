@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Configuring the Hitachi Vantara NAS data collector | NetApp Cloud Docs</title>
+  <title>Configuring the Azure NetApp Files data collector | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Configuring the Hitachi Vantara NAS data collector | NetApp Cloud Docs" />
+  <meta property="og:title" content="Configuring the Azure NetApp Files data collector | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_dc_hds_nas.html" />
-	<meta property="og:description" content="Configuring HDS NAS (HNAS) data collector." />
-  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/us-en/task_dc_ms_anf.html" />
+	<meta property="og:description" content="Configuring Azure NetApp Files data collector." />
+  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,17 +17,17 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Configuring HDS NAS (HNAS) data collector.">
-  <meta name="keywords" content=" data collector, HDS HNAS, HDS NAS">
+  <meta name="description" content="Configuring Azure NetApp Files data collector.">
+  <meta name="keywords" content=" data collector, azure, Netapp files">
   
   
 
   <!-- Icons -->
-  <link rel="icon" href="/cloudinsights/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/cloudinsights/us-en/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/us-en/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -36,23 +36,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/cloudinsights/common/css/esb.min.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/doc.css">
-  <link rel="stylesheet" href="/cloudinsights/common/css/doc-components.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/esb.min.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/cloudinsights/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/cloudinsights/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/cloudinsights/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/cloudinsights/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/cloudinsights/us-en/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/cloudinsights/us-en/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/cloudinsights/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/cloudinsights/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/netapp.css' type='text/css'>
 
   
 
@@ -61,23 +61,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/cloudinsights/js/na-search.js'></script>
+    <script src='/cloudinsights/us-en/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/cloudinsights/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/cloudinsights/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/cloudinsights/us-en/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/cloudinsights/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism-netapp.css' type='text/css'>
 
-  <script src='/cloudinsights/js/clouddocs.js'></script>
-  <script src='/cloudinsights/js/s_code_impl.js'></script>
-  <script src='/cloudinsights/js/jquery.navgoco.min.js'></script>
+  <script src='/cloudinsights/us-en/js/clouddocs.js'></script>
+  <script src='/cloudinsights/us-en/js/s_code_impl.js'></script>
+  <script src='/cloudinsights/us-en/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/cloudinsights/js/toc.js'></script>
-  <script src='/cloudinsights/js/customscripts.js'></script>
+  <script src='/cloudinsights/us-en/js/toc.js'></script>
+  <script src='/cloudinsights/us-en/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -201,7 +201,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/cloudinsights/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -209,11 +209,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -234,7 +234,7 @@
                 <span class="ie-i18n-lang">English</span>
                 <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                   <title>globe</title>
-                  <use xlink:href="/cloudinsights/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                  <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
                 </svg>
               </a>
             </li>
@@ -552,7 +552,7 @@
   
 
   
-    <li class="active"><a href="task_dc_hds_nas.html">HDS HNAS</a></li>
+    <li><a href="task_dc_hds_nas.html">HDS HNAS</a></li>
   
 
 
@@ -612,7 +612,7 @@
         
 
   
-    <li><a href="task_dc_ms_anf.html">Azure NetApp Files</a></li>
+    <li class="active"><a href="task_dc_ms_anf.html">Azure NetApp Files</a></li>
   
 
   
@@ -1236,11 +1236,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Configuring the Hitachi Vantara NAS data collector
+  <h1 class="n-doc__component-detail-heading">Configuring the Azure NetApp Files data collector
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_dc_hds_nas.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Configuring the Hitachi Vantara NAS data collector](https://docs.netapp.com/us-en/cloudinsights/task_dc_hds_nas.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_dc_ms_anf.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Configuring the Azure NetApp Files data collector](https://docs.netapp.com/us-en/cloudinsights/task_dc_ms_anf.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -1248,7 +1248,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-06-28 20:25:43 +0000">06/28/2019</time>
+<time datetime="2020-01-14 14:38:43 +0000">01/14/2020</time>
 
 
 <span>Contributors
@@ -1268,83 +1268,49 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>The Hitachi Vantara NAS data collector is an inventory and configuration data collector that  supports discovery of HDS NAS clusters. Cloud Insights supports discovering NFS and CIFS shares, file systems (Internal Volumes), and spans (Storage Pools).</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="terminology">Terminology</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cloud Insights acquires the following inventory information from the HNAS data collector. For each asset type acquired by Cloud Insights, the most common terminology used for this asset is shown. When viewing or troubleshooting this data collector, keep the following terminology in mind:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Vendor/Model Term</th>
-<th class="tableblock halign-left valign-top">Cloud Insights Term</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disk Group</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Node</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Span</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage Pool</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Drive</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backend Lun</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Files System</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Volume</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Note: These are common terminology mappings only and might not represent every case for this data collector.</p>
+<p>Cloud Insights uses the Azure NetApp Files data collector to acquire inventory and performance data.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="requirements">Requirements</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>You need the following information to configure this data collector.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Device IP address</p>
+<p>Port requirement: 443 HTTPS</p>
 </li>
 <li>
-<p>Port 22, SSH protocol</p>
+<p>Azure Management Rest IP (management.azure.com)</p>
 </li>
 <li>
-<p>Username and password - privilege level: Supervisor</p>
+<p>Azure service principal client ID (user account)</p>
 </li>
 <li>
-<p>Note: This data collector is SSH based, so the AU that hosts it must be able to initiate  SSH sessions to TCP 22 on the HNAS itself, or the Systems Management Unit (SMU) that the cluster is connected to.</p>
+<p>Azure service principal authentication key (user password)</p>
+</li>
+<li>
+<p>You need to set up an Azure account for Cloud Insights discovery.</p>
+<div class="paragraph">
+<p>Once the account is properly configured and you register the application in Azure, you will have the credentials required to discover the Azure instance with Cloud Insights. The following link describes how to set up the account for discovery:</p>
+</div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal" class="bare">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="configuration">Configuration</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Enter data into the data collector fields according to the table below:</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1358,23 +1324,27 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HNAS Host</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address or fully-qualified domain name of HNAS Management Host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure Service Principal Client ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sign-in ID to Azure</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User name for HNAS CLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure Tenant ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure Tenant ID</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password used for HNAS CLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure Service Principal Authentication Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Login authentication key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I understand Microsoft bills me for API requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Check this to verify your understanding that Microsoft bills you for API requests made by Insight polling.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="advanced-configuration">Advanced configuration</h2>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1390,7 +1360,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inventory Poll Interval (min)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval between inventory polls. The default is 30 minutes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The default is 60</p></td>
 </tr>
 </tbody>
 </table>
@@ -1400,42 +1370,7 @@
 <h2 id="troubleshooting">Troubleshooting</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Some things to try if you encounter problems with this data collector:</p>
-</div>
-<div class="sect3">
-<h4 id="inventory">Inventory</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Problem:</th>
-<th class="tableblock halign-left valign-top">Try this:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Error connecting" with error messages “Error setting up shell channel:”or “Error opening shell channel”</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Likely caused by network connectivity issues or SSH is misconfigured. Confirm connection with alternate SSH client</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Timeout" or “Error retrieving data" with error messages “Command: XXX has timed out."</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* Try the command with alternate SSH client<br>
-* Increase timeout</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Error connecting " or “Invalid login credentials" with error messages “Could not communicate with the device:"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* Check IP address<br>
-* Check user name and password<br>
-* Confirm connection with alternate SSH client</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Additional information may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
-</div>
+<p>Additional information on this Data Collector may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
 </div>
 </div>
 </div>
@@ -1478,7 +1413,7 @@
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -1487,7 +1422,7 @@
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -1497,7 +1432,7 @@
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -1506,7 +1441,7 @@
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -1530,15 +1465,15 @@
 
     </div>
 
-    <script src="/cloudinsights/common/js/components.js"></script>
-    <script src="/cloudinsights/common/js/doc-components.js"></script>
+    <script src="/cloudinsights/us-en/common/js/components.js"></script>
+    <script src="/cloudinsights/us-en/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/cloudinsights/js/bundle.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/cloudinsights/js/prism.js'></script>
-    <script type="text/javascript" src='/cloudinsights/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/prism.js'></script>
+    <script type="text/javascript" src='/cloudinsights/us-en/js/prism-curl.js'></script>
 
   </body>
 
