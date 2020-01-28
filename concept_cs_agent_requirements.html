@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
   <title>Agent Requirements | NetApp Cloud Docs</title>
@@ -290,7 +291,8 @@
 
       <!-- Content -->
       <main role="main" id="n-main-content" class="n-main-content">
-        <div class="n-container">
+        
+<div class="n-container">
   <div class="n-row">
     <div class="n-doc n-doc__component-list">
       <!-- Sidebar Column -->
@@ -1235,6 +1237,8 @@
         <article class="page-content">
           
 
+
+
 <div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Agent Requirements
     <span>
@@ -1248,7 +1252,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-01-03 21:11:16 +0000">01/03/2020</time>
+<time datetime="2020-01-28 15:04:41 +0000">01/28/2020</time>
 
 
 <span>Contributors
@@ -1335,29 +1339,7 @@ The agent systems should always have the Docker CE package installed. Users shou
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Network</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">100 Mbps 1 Gbps Ethernet connection, static IP address, IP connectivity to all devices, and a required port to the Cloud Secure instance (80 or 443).<br>
-<br>
-When a firewall is enabled, you must have an exception defined to allow TCP traffic for the port using the Data ONTAP Data Collector.<br>
-<br>
-For example on a RHEL7.x Agent system, use the following steps:<br>
-<br>
-<code>firewall-cmd --permanent --zone=public --add-port=35001/tcp</code><br>
-<br>
-<code>firewall-cmd --permanent --zone=public --add-port=35002/tcp</code><br>
-<br>
-<code>firewall-cmd --reload</code><br>
-<br>
-(assuming the ports are 35001 and 35002)<br>
-<br>
-<strong>Note:</strong> The agent requires ports from 35000 to 55000 to be open when using the default installation.<br>
-<br>
-Use a command similar to the following to verify that the ports are open:<br>
-<br>
-<code>iptables-save</code> | grep 35001 -A IN_public_allow -p tcp -m tcp --dport 35001 -m conntrack --ctstate NEW -j ACCEPT<br>
-<br>
-The port number can be obtained from the docker ps command output:<br>
-<code>docker ps</code><br>
-<code>firewall-cmd reload</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100 Mbps 1 Gbps Ethernet connection, static IP address, IP connectivity to all devices, and a required port to the Cloud Secure instance (80 or 443).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Agent outbound URLs (port 433)</p></td>
@@ -1468,6 +1450,8 @@ agentlogin.cs01.cloudinsights.netapp.com</p></td>
 </div>
 </div>
 
+
+
         </article>
         <!-- Page Container -->
       </div>
@@ -1484,6 +1468,7 @@ agentlogin.cs01.cloudinsights.netapp.com</p></td>
     </div>
   </div>
 </div>
+
 
       </main>
 
@@ -1572,3 +1557,5 @@ agentlogin.cs01.cloudinsights.netapp.com</p></td>
 
   
 </html>
+
+
