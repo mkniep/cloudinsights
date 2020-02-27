@@ -1256,24 +1256,24 @@
 
 <p class="page-details">
 
-<time datetime="2019-10-22 15:03:34 +0000">10/22/2019</time>
+<time datetime="2020-02-24 20:56:28 +0000">02/24/2020</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/netapp-alavoie">
     <img  class="avatar avatar-small"
           alt="netapp-alavoie"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/39956590?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dgracenetapp">
+    <img  class="avatar avatar-small"
+          alt="dgracenetapp"
+          width="20" height="20"
+          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1335,6 +1335,25 @@
 <p>Click <strong>Add Collector</strong> to save the configuration and add the data collector to your Cloud Insights tenant.</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>After adding a new data collector, Cloud Insights initiates three polls:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1st inventory poll: immediately</p>
+</li>
+<li>
+<p>1st performance data poll to establish a baseline: immediately after inventory poll</p>
+</li>
+<li>
+<p>2nd performance poll: within 15 seconds after completion of 1st performance poll</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Polling then proceeds according to the configured inventory and performance poll intervals.</p>
 </div>
 
 
