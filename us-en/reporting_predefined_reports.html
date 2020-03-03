@@ -1268,7 +1268,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-02-28 20:22:08 +0000">02/28/2020</time>
+<time datetime="2020-03-03 15:01:29 +0000">03/03/2020</time>
 
 
 <span>Contributors
@@ -1351,12 +1351,151 @@ The Reporting feature is available in Cloud Insights <a href="concept_subscribin
 <div class="paragraph">
 <p>The following predefined reports are available in <strong>Team content &gt; Reports</strong>.</p>
 </div>
+<div class="sect2">
+<h3 id="application-service-level-capacity-and-performance">Application Service Level Capacity and Performance</h3>
 <div class="paragraph">
-<p>////=== AWS Cloud Cost Data<br>
-The Cloud cost report provides a consolidated view of all assets so you can track, analyze and optimize usage and cost of cloud-based as well as on-prem services as they dynamically scale in your environment.</p>
+<p>The Application Service Level Capacity and Performance report provides a high level overview of your applications. You can use this information for capacity planning or for a migration plan.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="chargeback">Chargeback</h3>
+<div class="paragraph">
+<p>The Chargeback report provides storage capacity chargeback and accountability information by hosts, application, and business entities, and includes both current and historical data.</p>
 </div>
 <div class="paragraph">
-<p>The report provides infrastructure-to-cost correlation, giving clear and actionable reporting to ensure right-sizing through focused capacity planning and waste detection.</p>
+<p>To prevent double counting do not include ESX servers, only monitor the VMs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-sources">Data Sources</h3>
+<div class="paragraph">
+<p>The Data Sources report shows all the data sources that are installed on your site, the status of the data source (success/failure), and status messages. The report provides information about where to start troubleshooting data sources. Failed data sources impact the accuracy of reporting and the general usability of the product.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="esx-vs-vm-performance">ESX vs VM Performance</h3>
+<div class="paragraph">
+<p>The ESX vs VM Performance report provides a comparison of ESX servers and VMs, showing average and peak IOPs, throughput, and latency and utilizations for ESX servers and VMs. To prevent double counting, exclude the ESX servers; only include the VMs.<br>
+An updated version of this report is available at the NetApp Storage Automation Store.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fabric-summary">Fabric Summary</h3>
+<div class="paragraph">
+<p>The Fabric Summary report identifies switches and switch information, including port counts, firmware versions, and license status. The report does not include NPV switch ports.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="host-hbas">Host HBAs</h3>
+<div class="paragraph">
+<p>The Host HBAs report provides an overview of the hosts in the environment and provides the vendor, model, and firmware version of HBAs, and the firmware level of the switches to which they are connected. This report can be used to analyze firmware compatibility when planning a firmware upgrade for a switch or an HBA.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="host-service-level-capacity-and-performance">Host Service Level Capacity and Performance</h3>
+<div class="paragraph">
+<p>The Host Service Level Capacity and Performance report provides an overview of storage utilization by host for block only applications.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="host-summary">Host Summary</h3>
+<div class="paragraph">
+<p>The Host Summary report provides an overview of storage utilization by each selected host with information for Fibre Channel and iSCSI hosts. The report enables you to compare ports and paths, the Fibre Channel and ISCSI capacity, and violation counts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="license-details">License Details</h3>
+<div class="paragraph">
+<p>The License Details report shows the entitled quantity of resources you are licensed for across all sites with active licenses. The report also shows a summation of actual quantity across all the sites with active licenses. The summation may include overlaps of storage arrays managed by multiple servers.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mapped-but-not-masked-volumes">Mapped but not Masked Volumes</h3>
+<div class="paragraph">
+<p>The Mapped but not Masked Volumes report lists the volumes whose logical unit number (LUN) has been mapped for use by a particular host, but is not masked to that host. In some cases these could be decommissioned LUNs that have been unmasked. Unmasked volumes can be accessed by any host, making them vulnerable to data corruption.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-capacity-and-performance">NetApp Capacity and Performance</h3>
+<div class="paragraph">
+<p>The NetApp Capacity and Performance report provides global data for allocated, utilized, and committed capacity with trending and performance data for NetApp capacity.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scorecard">Scorecard</h3>
+<div class="paragraph">
+<p>The Scorecard report provides a summary and general status of all assets acquired by Cloud Insights. Status is indicated with green, yellow, and red flags:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Green indicates normal condition</p>
+</li>
+<li>
+<p>Yellow indicates a potential issue in the environment</p>
+</li>
+<li>
+<p>Red indicates an issue that requires attention</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of the fields in the report are described in the Data Dictionary provided with the report.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-summary">Storage Summary</h3>
+<div class="paragraph">
+<p>The Storage Summary report provides a global summary of used and unused capacity data for raw, allocated, storage pools, and volumes. This report provides an overview of all of the storage discovered.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="vm-capacity-and-performance">VM Capacity and Performance</h3>
+<div class="paragraph">
+<p>Describes the virtual machine (VM) environment and its capacity usage. VM tools must be enabled to view some data, such as when VMs were powered down.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="vm-paths">VM Paths</h3>
+<div class="paragraph">
+<p>The VM Paths report provides data store capacity data and performance metrics for which virtual machine is running on which host, which hosts are accessing which shared volumes, what the active access path is, and what comprises capacity allocation and usage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hds-capacity-by-thin-pool">HDS Capacity by Thin Pool</h3>
+<div class="paragraph">
+<p>The HDS Capacity by Thin Pool report shows the amount of usable capacity on a storage pool that is thin provisioned.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-capacity-by-aggregate">NetApp Capacity by Aggregate</h3>
+<div class="paragraph">
+<p>The NetApp Capacity by Aggregate report shows raw total, total, used, available, and committed space of aggregates.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="symmetrix-capacity-by-thick-array">Symmetrix Capacity by Thick Array</h3>
+<div class="paragraph">
+<p>The Symmetrix Capacity by Thick Array report shows raw capacity, useable capacity, free capacity, mapped, masked, and total free capacity.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="symmetrix-capacity-by-thin-pool">Symmetrix Capacity by Thin Pool</h3>
+<div class="paragraph">
+<p>The Symmetrix Capacity by Thin Pool report shows raw capacity, useable capacity, used capacity, free capacity, used percentage, subscribed capacity, and subscription rate.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xiv-capacity-by-array">XIV Capacity by Array</h3>
+<div class="paragraph">
+<p>The XIV Capacity by Array report shows used and unused capacity for the array.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xiv-capacity-by-pool">XIV Capacity by Pool</h3>
+<div class="paragraph">
+<p>The XIV Capacity by Pool report shows used and unused capacity for storage pools.</p>
+</div>
 </div>
 </div>
 </div>
