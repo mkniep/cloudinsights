@@ -215,7 +215,9 @@
     });
     var s = document.getElementById("expandall");
     $(document).ready(function() {
-      s.addEventListener("click", o, !1)
+      if(s != null) {
+        s.addEventListener("click", o, !1);
+      }
     })
   },
   123: function(e, t, n) {

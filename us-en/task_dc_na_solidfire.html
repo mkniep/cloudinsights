@@ -1254,6 +1254,8 @@
           
 
 
+  
+
 
 <div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">NetApp SolidFire All-Flash Array data collector
@@ -1268,7 +1270,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-12-05 15:28:02 +0000">12/05/2019</time>
+<time datetime="2020-03-11 14:48:18 +0000">03/11/2020</time>
 
 
 <span>Contributors
@@ -1446,6 +1448,28 @@
 <div class="sect1">
 <h2 id="troubleshooting">Troubleshooting</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>When SolidFire reports an error it is displayed in Cloud Insights as follows:</p>
+</div>
+<div class="paragraph">
+<p><em>An error message was received from a SolidFire device while trying to retrieve data. The call was &lt;method&gt; (&lt;parameterString&gt; ). The error message from the device was (check the device manual): &lt;message&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The &lt;method&gt; is an HTTP method, such as GET or PUT.</p>
+</li>
+<li>
+<p>The &lt;parameterString&gt; is a comma separated list of parameters that were included in the REST call.</p>
+</li>
+<li>
+<p>The &lt;message&gt; is whatever the device returned as the error message.</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>Additional information on this Data Collector may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
 </div>
