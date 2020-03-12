@@ -1270,7 +1270,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-12-05 19:27:25 +0000">12/05/2019</time>
+<time datetime="2020-03-12 16:01:59 +0000">03/12/2020</time>
 
 
 <span>Contributors
@@ -1348,6 +1348,132 @@
 </table>
 <div class="paragraph">
 <p>Note: These are common terminology mappings only and might not represent every case for this data collector.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="e-series-terminology-landing-page">E-Series Terminology (Landing Page)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following terms apply to objects or references that you might find on NetApp E-Series asset landing pages. Many of these terms apply to other data collectors as well.</p>
+</div>
+<div class="sect2">
+<h3 id="e-series-storage">E-Series Storage</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Model – model name of the device.</p>
+</li>
+<li>
+<p>Vendor – same Vendor name you would see if you were configuring a new datasource</p>
+</li>
+<li>
+<p>Serial number – The array serial number. On cluster architecture storage systems like NetApp Clustered Data Ontap, this serial number may be less useful than the individual “Storage Nodes” serial numbers</p>
+</li>
+<li>
+<p>IP – generally will be the IP(s) or hostname(s) as configured in the data source</p>
+</li>
+<li>
+<p>Microcode version – firmware</p>
+</li>
+<li>
+<p>Raw Capacity – base 2 summation of all the physical disks in the system, regardless of their role</p>
+</li>
+<li>
+<p>Latency – a representation of what the host facing workloads are experiencing, across both reads and writes. Ideally, Cloud Insights is sourcing this value directly, but this is often not the case. In lieu of the array offering this up, Cloud Insights is generally performing an IOPs-weighted calculation derived from the individual volumes’ statistics.</p>
+</li>
+<li>
+<p>Throughput – the array’s total host facing throughput. Ideally sourced directly from the array, if unavailable, Cloud Insights is summing the volumes’ throughput to derive this value</p>
+</li>
+<li>
+<p>Management – this may contain a hyperlink for the management interface of the device. Created programmatically by the Cloud Insights datasource as part of inventory reporting<br>
+ </p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e-series-storage-pool">E-Series Storage Pool</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Storage – what storage array this pool lives on. Mandatory</p>
+</li>
+<li>
+<p>Type – a descriptive value from a list of an enumerated list of possibilities. Most commonly will be “Thin Provisioning” or “RAID Group”</p>
+</li>
+<li>
+<p>Node – if this storage array’s architecture is such that pools belong to a specific storage node, its name will be seen here as a hyperlink to its own landing page</p>
+</li>
+<li>
+<p>Uses Flash Pool – Yes/No value</p>
+</li>
+<li>
+<p>Redundancy – RAID level or protection scheme. E-Series reports “RAID 7” for DDP pools</p>
+</li>
+<li>
+<p>Capacity – the values here are the logical used, usable capacity and the logical total capacity, and the percentage used across these. These value both include E-Series “preservation” capacity, resulting both in numbers and the percentage being higher than what the E-Series own user interface may show</p>
+</li>
+<li>
+<p>Over-committed capacity – If via efficiency technologies you have allocated a sum total of volume or internal volume capacities larger than the logical capacity of the storage pool, the percentage value here will be greater than 0%.</p>
+</li>
+<li>
+<p>Snapshot – snapshot capacities used and total, if your storage pool architecture dedicates part of its capacity to segments areas exclusively for snapshots</p>
+</li>
+<li>
+<p>Utilization – a percentage value showing the highest disk busy percentage of any disk contributing capacity to this storage pool. Disk utilization does not necessarily have a strong correlation with array performance – utilization may be high due to disk rebuilds, deduplication activities, etc in the absence of host driven workloads. Also, many arrays’ replication implementations may drive disk utilization while not showing as volume workload.</p>
+</li>
+<li>
+<p>IOPS – the sum IOPs of all the disks contributing capacity to this storage pool. If disk IOPs is not available on a given platform, this value will be sourced from the sum of volume IOPs for all the volumes sitting on this storage pool</p>
+</li>
+<li>
+<p>Throughput – the sum throughput of all the disks contributing capacity to this storage pool. If disk throughput is not available on a given platform, this value will be sourced from the sum of volume throughout for all the volumes sitting on this storage pool</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e-series-storage-node">E-Series Storage Node</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Storage – what storage array this node is part of. Mandatory</p>
+</li>
+<li>
+<p>HA Partner – on platforms where a node will fail over to one and only one other node, it will generally be seen here</p>
+</li>
+<li>
+<p>State – health of the node. Only available when the array is healthy enough to be inventoried by a data source</p>
+</li>
+<li>
+<p>Model – model name of the node</p>
+</li>
+<li>
+<p>Version – version name of the device.</p>
+</li>
+<li>
+<p>Serial number – The node serial number</p>
+</li>
+<li>
+<p>Memory – base 2 memory if available</p>
+</li>
+<li>
+<p>Utilization – Generally a CPU utilization number, or in the case of NetApp Ontap, a controller stress index. Utilization is not currently available for NetApp E-Series</p>
+</li>
+<li>
+<p>IOPS – a number representing the host driven IOPs on this controller. Ideally sourced directly from the array, if unavailable, it will be calculated by summing all the IOPs for volumes that belong exclusively to this node.</p>
+</li>
+<li>
+<p>Latency – a number representing the typical host latency or response time on this controller. Ideally sourced directly from the array, if unavailable, it will be calculated by performing an IOPs weighted calculation from volumes that belong exclusively to this node.</p>
+</li>
+<li>
+<p>Throughput – a number representing the host driven throughput on this controller. Ideally sourced directly from the array, if unavailable, it will be calculated by summing all the throughput for volumes that belong exclusively to this node.</p>
+</li>
+<li>
+<p>Processors – CPU count</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
