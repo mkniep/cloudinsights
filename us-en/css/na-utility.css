@@ -1,7 +1,21 @@
 .n-breadcrumb {
   display: none;
-  padding-top: 18px;
+  padding-top: 0px;
   margin-left: 12px;
+  vertical-align: middle;
+  height: 70px;
+  line-height: 70px;
+}
+
+.n-breadcrumb__list {
+  display: inline-block;
+  position: relative;
+  line-height: .5;
+  vertical-align: middle;
+}
+
+.n-breadcrumb__list-item {
+  vertical-align: middle;
 }
 
 .ie-utility {
@@ -200,6 +214,7 @@ button.n-property-bar__search-toggle-button {
   .ie-utility {
     display: block;
     height: 140px;
+    margin-left: 20px;
   }
 
   .n-breadcrumb {
@@ -240,9 +255,14 @@ button.n-property-bar__search-toggle-button {
   .ie-utility {
     display: block;
     height: 70px;
+    margin-left: 0px;
   }
 
   .n-property-bar__toolbar {
     float: right;
+  }
+
+  .n-breadcrumb__list {
+    width: calc(100vw - 450px);
   }
 }
