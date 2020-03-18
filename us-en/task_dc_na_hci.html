@@ -1802,7 +1802,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-12-06 19:48:21 +0000">12/06/2019</time>
+<time datetime="2020-03-18 13:32:42 +0000">03/18/2020</time>
 
 
 
@@ -1902,7 +1902,7 @@
 <p>Read-only username and password for the NetApp HCI Management server</p>
 </li>
 <li>
-<p>We require read only privileges on all objects in the NetApp HCI Management server.</p>
+<p>Read only privileges on all objects in the NetApp HCI Management server.</p>
 </li>
 <li>
 <p>SDK access on the NetApp HCI Management server – normally already set up.</p>
@@ -1970,12 +1970,12 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Management server IP Address</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address of the NetApp HCI Management server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NetApp HCI Storage Cluster MVIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Management Virtual IP Address</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Management Node IP address</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address of the NetApp HCI Management node (mNode)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolidFire Management Node (mNode)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Management Node IP Address</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User name</p></td>
@@ -1984,6 +1984,14 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Password used to access the NetApp HCI Management server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VCenter User Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User name for VCenter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VCenter Password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password for VCenter</p></td>
 </tr>
 </tbody>
 </table>
@@ -2016,11 +2024,11 @@ The following fields can be configured:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Choose 'Exclude' or 'Include' to Specify a List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create a filter list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify Whether to Include or Exclude VMs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Filter Device List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma Separated list of devices for Filtering by ESX_HOST, CLUSTER, and DATACENTER Only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of VMs to filter (comma separated, or semicolon separated if comma is used in the value) for for Filtering by ESX_HOST, CLUSTER, and DATACENTER Only</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Performance poll interval (sec)</p></td>
