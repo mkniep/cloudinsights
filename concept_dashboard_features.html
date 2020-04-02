@@ -1809,7 +1809,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-02-11 15:49:31 +0000">02/11/2020</time>
+<time datetime="2020-03-31 15:39:25 +0000">03/31/2020</time>
 
 
 <span>Contributors
@@ -1850,6 +1850,7 @@
 <li><a href="#variables">Variables</a></li>
 <li><a href="#formatting-gauge-widgets">Formatting Gauge Widgets</a></li>
 <li><a href="#formatting-single-value-widget">Formatting Single-Value Widget</a></li>
+<li><a href="#choosing-the-unit-for-displaying-data">Choosing the Unit for Displaying Data</a></li>
 </ul>
 </div>
 </div>
@@ -2751,6 +2752,193 @@ To use the "$this" variables in widgets on your asset&#8217;s landing page, foll
 </div>
 <div class="paragraph">
 <p>Clicking the link in either a single-value widget or a gauge widget will display a query page corresponding to the first query in the widget.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="choosing-the-unit-for-displaying-data">Choosing the Unit for Displaying Data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most widgets on a dashboard allow you to specify the Units in which to display values, for example <em>Megabytes</em>, <em>Thousands</em>, <em>Percentage</em>, <em>Milliseconds (ms)</em>, etc. In many cases, Cloud Insights knows the best format for the data being acquired. In cases where the best format is not known, you can set the format you want.</p>
+</div>
+<div class="paragraph">
+<p>In the line chart example below, the data selected for the widget is known to be in <em>bytes</em> (the base IEC Data unit: see the table below), so the Base Unit is automatically selected as 'byte (B)'. However, the data values are large enough to be presented as gibibytes (GiB), so Cloud Insights by default auto-formats the values as GiB. The Y-axis on the graph shows 'GiB' as the display unit, and all values are displayed in terms of that unit.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/used_memory_in_bytes.png" alt="Base Unit Byte shown in Gigabytes" width="640"></span></p>
+</div>
+<div class="paragraph">
+<p>If you want to display the graph in a different unit, you can choose another format in which to display the values. Since the base unit in this example is <em>byte</em>, you can choose from among the supported "byte-based" formats: bit (b), byte (B), kibibyte (KiB), mebibyte (MiB), gibibyte (GiB). The Y-Axis label and values change according to the format you choose.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/used_memory_in_bytes_gb.png" alt="Choosing a display unit" width="640"></span></p>
+</div>
+<div class="paragraph">
+<p>In cases where the base unit is not known, you can assign a unit from among the <a href="#available-units">available units</a>, or type in your own. Once you assign a base unit, you can then select to display the data in one of the appropriate supported formats.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/bits_per_second.png" alt="Choose your own base unit" width="320"></span></p>
+</div>
+<div class="paragraph">
+<p>To clear out your settings and start again, click on <strong>Reset Defaults</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="a-word-about-auto-format">A word about Auto-Format</h3>
+<div class="paragraph">
+<p>Most metrics are reported by data collectors in the smallest unit, for example as a whole number such as 1,234,567,890 bytes. By default, Cloud Insights will automatically format the value for the most readable display, e.g. 1.23bn (billion) bytes. If you choose instead to display this as millions (m), the value will show as 1,234m. If you choose to display as trillion, it will show .001t.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cloud Insights uses American English number naming standards. American "billion" is equivalent to "thousand million".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="widgets-with-multiple-queries">Widgets with multiple queries</h3>
+<div class="paragraph">
+<p>If you have a time-series widget (i.e. line, spline, area, stacked area) that has two queries where both are plotted the primary Y-Axis, the base unit is not shown at the top of the Y-Axis.  However, if your widget has a query on the primary Y-Axis and a query on the secondary Y-Axis, the base units for each are shown.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/UnitsOnPrimaryAnd%20SecondaryYAxis.png" alt="Units on both Y-Axes"></span></p>
+</div>
+<div class="paragraph">
+<p>If your widget has three or more queries, base units are not shown on the Y-Axis.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="available-units">Available Units</h3>
+<div class="paragraph">
+<p>The following table shows all the available units by category.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Category</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cent<br>
+dollar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data(IEC)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bit<br>
+byte<br>
+kibibyte<br>
+mebibyte<br>
+gibibyte<br>
+tebibyte<br>
+pebibyte<br>
+exbibyte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DataRate(IEC)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bit/sec<br>
+byte/sec<br>
+kibibyte/sec<br>
+mebibyte/sec<br>
+gibibyte/sec<br>
+tebibyte/sec<br>
+pebibyte/sec</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data(Metric)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kilobyte<br>
+megabyte<br>
+gigabyte<br>
+terabyte<br>
+petabyte<br>
+exabyte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DataRate(Metric)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kilobyte/sec<br>
+megabyte/sec<br>
+gigabyte/sec<br>
+terabyte/sec<br>
+petabyte/sec<br>
+exabyte/sec</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IEC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kibi<br>
+mebi<br>
+gibi<br>
+tebi<br>
+pebi<br>
+exbi</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">whole number<br>
+thousand<br>
+million<br>
+bilion<br>
+trillion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percentage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">percentage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nanosecond<br>
+microsecond<br>
+millisecond<br>
+second<br>
+minute<br>
+hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">celsius<br>
+fahrenheit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frequency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hertz<br>
+kilohertz<br>
+megahertz<br>
+gigahertz</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nanocores<br>
+microcores<br>
+millicores<br>
+cores<br>
+kilocores<br>
+megacores<br>
+gigacores<br>
+teracores<br>
+petacores<br>
+exacores</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I/O ops/sec<br>
+ops/sec<br>
+requests/sec<br>
+reads/sec<br>
+writes/sec<br>
+ops/min<br>
+reads/min<br>
+writes/min</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
