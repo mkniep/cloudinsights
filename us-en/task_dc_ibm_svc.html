@@ -1809,7 +1809,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-01-15 16:08:34 +0000">01/15/2020</time>
+<time datetime="2020-04-03 14:57:14 +0000">04/03/2020</time>
 
 
 <span>Contributors
@@ -1898,25 +1898,7 @@
 <li>
 <p>Port 22 available</p>
 </li>
-<li>
-<p>Public and private key pair that you either generate with Cloud Insights or reuse a keypair already in use on your SVC</p>
-<div class="paragraph">
-<p>If you are reusing an existing keypair, you must convert them from Putty format to OpenSSH format.</p>
-</div>
-</li>
-<li>
-<p>Public key installed on the SVC cluster</p>
-</li>
-<li>
-<p>Private key needs to be identified in the Acquisition Unit.</p>
-</li>
-<li>
-<p>Access validation: Open ssh session to the SVC cluster using the private key</p>
-</li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Note: No third-party software needs to be installed.</p>
 </div>
 </div>
 </div>
@@ -1934,9 +1916,10 @@
 <p>Note: Because this access level is not required for the SVC foundation discovery package, the SVC foundation user might not work successfully.</p>
 </div>
 </li>
-<li>
-<p>A private and public SSH key must be generated for this user, and the private key stored so that it is accessible from the Acquisition Unit. If the SVC foundation user has the proper permissions, then the same user and key works. The same SSH key can be used for inventory and performance data.</p>
-</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Enable data collection by connecting to the SVC cluster by SSH and running: <em>svctask startstats -interval 1</em></p>
 <div class="paragraph">
@@ -1966,8 +1949,8 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster&#8217;s IP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address or fully-qualified domain name of the SVC storage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster IP Addresses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IP addresses or fully-qualified domain names of the SVC storage</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inventory User Name</p></td>
@@ -2003,10 +1986,6 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Performance Poll Interval (sec)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Interval between performance polls. The default is 300 seconds).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance Exclude Devices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of device IDs to exclude from performance collection</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To clean up dumped stats files</p></td>
