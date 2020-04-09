@@ -1805,24 +1805,24 @@
 
 <p class="page-details">
 
-<time datetime="2020-02-03 14:34:38 +0000">02/03/2020</time>
+<time datetime="2020-04-09 15:57:49 +0000">04/09/2020</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/netapp-alavoie">
     <img  class="avatar avatar-small"
           alt="netapp-alavoie"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/39956590?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dgracenetapp">
+    <img  class="avatar avatar-small"
+          alt="dgracenetapp"
+          width="20" height="20"
+          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1898,15 +1898,12 @@ The agent systems should always have the Docker CE package installed. Users shou
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Agent outbound URLs (port 433)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* <a href="https://&lt;tenant" class="bare">https://&lt;tenant</a> id&gt;.cs01.cloudinsights.netapp.com<br>
-+<br>
-You can get the tenant ID from the product URL. For example: <a href="https://ab1234.cs01.cloudinsights.netapp.com" class="bare">https://ab1234.cs01.cloudinsights.netapp.com</a><br>
-You can use a boarder range to specify the tenant ID: <a href="https://*.cs01.cloudinsights.netapp.com/" class="bare">https://*.cs01.cloudinsights.netapp.com/</a><br>
-<a href="https://gateway.c01.cloudinsights.netapp.com" class="bare">https://gateway.c01.cloudinsights.netapp.com</a><br>
-agentlogin.cs01.cloudinsights.netapp.com<br>
-# agentlogin.preview.cloudsecure.netapp.com (used for getting the jwt token using certificates)<br>
-# 376015418222.dkr.ecr.us-east-1.amazonaws.com (used to pull docker images from ecr)<br>
-# prod-us-east-1-starport-layer-bucket.s3.amazonaws.com (used to download docker image digest)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">https://&lt;Site ID&gt;.cs01.cloudinsights.netapp.com<br>
+You can use a broader range to specify the tenant ID: https://*.cs01.cloudinsights.netapp.com/<br>
+<br>
+https://gateway.c01.cloudinsights.netapp.com<br>
+<br>
+https://agentlogin.cs01.cloudinsights.netapp.com</p></td>
 </tr>
 </tbody>
 </table>
@@ -1999,9 +1996,6 @@ agentlogin.cs01.cloudinsights.netapp.com</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><a href="task_cs_add_agent.html">Configure an Agent</a></p>
-</div>
 </div>
 </div>
 
