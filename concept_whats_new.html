@@ -1805,7 +1805,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-04-02 14:27:13 +0000">04/02/2020</time>
+<time datetime="2020-04-07 18:03:51 +0000">04/07/2020</time>
 
 
 <span>Contributors
@@ -1815,14 +1815,6 @@
           alt="netapp-alavoie"
           width="20" height="20"
           src="https://avatars0.githubusercontent.com/u/39956590?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1843,6 +1835,31 @@
 </div>
 <div class="sect2">
 <h3 id="april-2020">April 2020</h3>
+<div class="sect3">
+<h4 id="default-dashboard-time">Default Dashboard Time</h4>
+<div class="paragraph">
+<p>The default time range for dashboards is now 3 Hours instead of 24 hours.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="optimized-aggregation-times">Optimized Aggregation Times</h4>
+<div class="paragraph">
+<p>Optimized <a href="http://concept_dashboard_features.html#aggregating-data">time aggregation</a> intervals in time-series widgets (Line, Spline, Area, and Stacked Area charts) are more frequent for 3-hour and 24-hour dashboard/widget time ranges, allowing for faster charting of data.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3 hour time range optimizes to a 1 minute aggregation interval. Previously this was 5 minutes.</p>
+</li>
+<li>
+<p>24 hour time range optimizes to a 30 minute aggregation interval. Previously this was 1 hour.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can still override the optimized aggregation by setting a custom interval.</p>
+</div>
+</div>
 <div class="sect3">
 <h4 id="display-unit-auto-format">Display Unit Auto-Format</h4>
 <div class="paragraph">
