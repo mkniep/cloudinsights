@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Cisco MDS Fabric Switches data collector | NetApp Cloud Docs</title>
+  <title>Alert Details | NetApp Cloud Docs</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Cisco MDS Fabric Switches data collector | NetApp Cloud Docs" />
+  <meta property="og:title" content="Alert Details | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/task_dc_cisco_fc_switch.html" />
-	<meta property="og:description" content="Configuring Cisco MDS Fablic Switch data collector." />
-  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/cloudinsights/us-en/forensic_alert_detail.html" />
+	<meta property="og:description" content="alert details" />
+  <meta property="og:image" content="https://docs.netapp.com/cloudinsights/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -18,17 +18,17 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Configuring Cisco MDS Fablic Switch data collector.">
-  <meta name="keywords" content=" data collector, cisco, FC, cisco FC">
+  <meta name="description" content="alert details">
+  <meta name="keywords" content=" alert, Critical, Warning, Low, alert detail Synopsis, Time range, Start time, End time, user">
   
   
 
   <!-- Icons -->
-  <link rel="icon" href="/cloudinsights/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/cloudinsights/us-en/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/cloudinsights/us-en/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -37,13 +37,13 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/cloudinsights/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/cloudinsights/us-en/css/font-awesome.min.css">
 
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/cloudinsights/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/cloudinsights/us-en/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/cloudinsights/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/netapp.css' type='text/css'>
 
   <!-- WWW CSS Content -->
   <link rel="stylesheet" href="https://www.netapp.com/us/static/css/luci-dotcom.min.css?v10007269030243">
@@ -53,10 +53,10 @@
   <link rel="stylesheet" href="https://www.netapp.com/us/static/css/netapp-library-global-header-footer.min.css">
 
   <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/cloudinsights/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/cloudinsights/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/na-pagenav.css' type='text/css'>
+  <link rel="stylesheet" href='/cloudinsights/us-en/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/cloudinsights/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/na-pagenav.css' type='text/css'>
 
   
 
@@ -66,24 +66,24 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/cloudinsights/js/na-search.js'></script>
+    <script src='/cloudinsights/us-en/js/na-search.js'></script>
   
 
   
-  <script src='/cloudinsights/js/na-pagenav.js'></script>
+  <script src='/cloudinsights/us-en/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/cloudinsights/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/cloudinsights/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/cloudinsights/us-en/css/prism-netapp.css' type='text/css'>
 
 
-<script src='/cloudinsights/js/na-utility.js'></script>
-  <script src='/cloudinsights/js/clouddocs.js'></script>
-  <script src='/cloudinsights/js/s_code_impl.js'></script>
-  <script src='/cloudinsights/js/jquery.navgoco.min.js'></script>
+<script src='/cloudinsights/us-en/js/na-utility.js'></script>
+  <script src='/cloudinsights/us-en/js/clouddocs.js'></script>
+  <script src='/cloudinsights/us-en/js/s_code_impl.js'></script>
+  <script src='/cloudinsights/us-en/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/cloudinsights/js/toc.js'></script>
-  <script src='/cloudinsights/js/customscripts.js'></script>
+  <script src='/cloudinsights/us-en/js/toc.js'></script>
+  <script src='/cloudinsights/us-en/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -206,7 +206,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/cloudinsights/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -215,11 +215,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/cloudinsights/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -233,7 +233,7 @@
                   <span class="n-property-navigation-bar__nav-link-text">Products and Solutions</span>
                   <svg class="n-icon-chevron-down n-property-navigation-bar__menu-indicator" aria-labelledby="title">
                     <title>chevron-down</title>
-                    <use xlink:href="/cloudinsights/common/svg/sprite.svg#chevron-down"></use>
+                    <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#chevron-down"></use>
                   </svg>
                 </a>
               </li>
@@ -242,7 +242,7 @@
                   <span class="n-property-navigation-bar__nav-link-text">Support and Training</span>
                   <svg class="n-icon-chevron-down n-property-navigation-bar__menu-indicator" aria-labelledby="title">
                     <title>chevron-down</title>
-                    <use xlink:href="/cloudinsights/common/svg/sprite.svg#chevron-down"></use>
+                    <use xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#chevron-down"></use>
                   </svg>
                 </a>
               </li>
@@ -744,7 +744,7 @@
         <button class="ie-i18n-icon-container" type="button">
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -798,7 +798,7 @@
       <button class="n-property-bar__search-toggle-button" type="button">
         <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
           <title>search</title>
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#search"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#search"></use>
         </svg>
       </button>
     </div>
@@ -820,10 +820,10 @@
       
 
       <li class="n-breadcrumb__list-item">
-        <a href="/cloudinsights/">Cloud&nbsp;Insights</a>
+        <a href="/cloudinsights/us-en/">Cloud&nbsp;Insights</a>
       </li>
       <li class="n-breadcrumb__list-item">
-        Cisco MDS Fabric Switches data collector
+        Alert Details
       </li>
     </ul>
   </div>
@@ -979,7 +979,7 @@
   
 
   
-    <li class="active"><a href="task_dc_cisco_fc_switch.html">Cisco</a></li>
+    <li><a href="task_dc_cisco_fc_switch.html">Cisco</a></li>
   
 
   
@@ -1800,23 +1800,15 @@
 
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Cisco MDS Fabric Switches data collector</h1>
+  <h1 class="n-doc__component-detail-heading">Alert Details</h1>
 </div>
 
 <p class="page-details">
 
-<time datetime="2020-02-13 13:44:44 +0000">02/13/2020</time>
+<time datetime="2020-04-10 15:05:58 +0000">04/10/2020</time>
 
 
 <span>Contributors
-  
-  <a target="_blank" href="https://github.com/dgracenetapp">
-    <img  class="avatar avatar-small"
-          alt="dgracenetapp"
-          width="20" height="20"
-          src="https://avatars0.githubusercontent.com/u/38116247?v=4"
-          style="border-radius: 50%;"/>
-  </a>
   
   <a target="_blank" href="https://github.com/netapp-alavoie">
     <img  class="avatar avatar-small"
@@ -1835,301 +1827,157 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Insights uses the Cisco MDS Fabric Switches data collector to discover inventory for Cisco MDS Fabric Switches as well as a variety of Cisco Nexus FCoE switches on which the FC service is enabled.</p>
-</div>
-<div class="paragraph">
-<p>Additionally, you can discover many models of Cisco devices running in NPV mode with this data collector.</p>
+<p>Clicking the synopsis for an alert  opens the page providing detailed information for the user and the alert they raised.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="terminology">Terminology</h2>
+<h2 id="alert-details-page-displays-user">Alert Details page displays user</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Insights acquires the following inventory information from the Cisco FC Switch data collector. For each asset type acquired by Cloud Insights, the most common terminology used for this asset is shown. When viewing or troubleshooting this data collector, keep the following terminology in mind:</p>
+<p>Alert Details provides information for the alert selected in the Alerts page.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Switch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Switch</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VSAN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fabric</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zone</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zone</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logical Switch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logical Switch</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name Server Entry</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name Server Entry</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inter-VSAN Routing (IVR) Zone</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IVR Zone</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Note: These are common terminology mappings only and might not represent every case for this data collector.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="requirements">Requirements</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>An IP address of one switch in the fabric or individual switches</p>
+<p>The severity of the alert</p>
 </li>
 <li>
-<p>Chassis discovery, to enable fabric discovery</p>
+<p>The user that raised the alert and the  alert type:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Abnormal Access By User</p>
 </li>
 <li>
-<p>If using SNMP V2, read-only community string</p>
+<p>Abnormal Access By Community</p>
 </li>
 <li>
-<p>Port 161 is used to access the device</p>
+<p>Abnormal Access By User in Community</p>
+</li>
+<li>
+<p>User joined many communities</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Date and time the alert was detected</p>
+</li>
+<li>
+<p>The action taken</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Quarantined</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The status of the alert</p>
+<div class="ulist">
+<ul>
+<li>
+<p>New</p>
+</li>
+<li>
+<p>In progress</p>
+</li>
+<li>
+<p>Dismissed</p>
+</li>
+<li>
+<p>Resolved</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User&#8217;s activity rate change</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Typical per hour activities</p>
+</li>
+<li>
+<p>Per hour activities when the alert was raised.</p>
+</li>
+<li>
+<p>Percentage of rate change that caused the alert.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A graph showing historical average activity rate and the activity rate that resulted in the alert.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="related-user">Related User</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>User name and title</p>
+</li>
+<li>
+<p>Department</p>
+</li>
+<li>
+<p>Email with a link to the Email address</p>
+</li>
+<li>
+<p>Manager</p>
+</li>
+<li>
+<p>Phone</p>
+</li>
+<li>
+<p>Location</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="configuration">Configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cisco Switch IP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address or fully-qualified domain name of the switch</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select V1, V2, or V3. V2 or later is required for performance acquisition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Community String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP read-only community string used to access the switch (not applicable for SNMP v3)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User name for the switch (SNMP v3 only)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Password used for the switch (SNMPv3 only)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="advanced-configuration">Advanced configuration</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inventory Poll Interval (min)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval between inventory polls (default 40 minutes)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Auth Protocol</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP authentication protocol (SNMPv3 only)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Privacy Protocol</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP privacy protocol (SNMPv3 only)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Privacy Password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Privacy Password</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Retries</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of SNMP retry attempts</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP Timeout (ms)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNMP timeout (default 5000 ms)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enable Trapping</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select to enable trapping. If you enable trapping, you must also activate SNMP notifications.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum Time Between Traps (sec)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum time between acquisition attempts triggered by traps (default 10 seconds)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Discover All Fabric Switches</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select to discover all switches in the fabric</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Excluded Devices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of device IPs to exclude from polling</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Included Devices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of device IPs to include in polling</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Check Device Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select to accept only those devices that explicitly advertise themselves as Cisco devices</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">First Alias Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Provide a first preference for resolution of the alias. Choose from the following:<br>
-<br>
-<strong>Device Alais</strong><br>
-This is a user-friendly name for a port WWN (pWWN) that can be used in all configuration commands, as required. All switches in the Cisco MDS 9000 Family support Distributed Device Alias Services (device aliases).<br>
-<br>
-<strong>None</strong><br>
-Do not report any alias.<br>
-<br>
-<strong>Port Description</strong><br>
-A description to help identify the port in a list of ports.<br>
-<br>
-<strong>Zone Alias (all)</strong><br>
-A user-friendly name for a port that can be used only for the active configuration. This is the default.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Second Alias Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Provide a second preference for resolution of the alias</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Third Alias Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Provide a third preference for resolution of the alias</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enable SANTap Proxy Mode Support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select if your Cisco switch is using SANTap in proxy mode. If you are using EMC RecoverPoint, then you are probably using SANTap.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance Poll Interval (sec)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval between performance polls (default 300 seconds)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="activity">Activity</h3>
 <div class="paragraph">
-<p>Some things to try if you encounter problems with this data collector:</p>
+<p>Shows the user&#8217;s activity for the last 7 days and the last location the user accessed from.</p>
 </div>
-<div class="sect3">
-<h4 id="inventory">Inventory</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Problem:</th>
-<th class="tableblock halign-left valign-top">Try this:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Failed to discover chassis - no switches have been discovered</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">•	Ping the device with the IP configured<br>
-•	Login to the device using Cisco Device Manager GUI<br>
-•	Login to the device using CLI<br>
-•	Try to run SNMP walk</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Device is not a Cisco MDS switch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">•	Make sure the data source IP configured for the device is correct<br>
-•	Login to the device using Cisco Device Manager GUI<br>
-•	Login to the device using CLI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Cloud Insights is not able to obtain the switch’s WWN.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This may not be a FC or FCoE switch, and as such may not be supported. Make sure the IP/FQDN configured in the datasource is truly a FC/FCoE switch.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Found more than one nodes logged into NPV switch port</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disable direct acquisition of the NPV switch</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Could not connect to the switch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">•	Make sure the device is UP<br>
-•	Check the IP address and listening port<br>
-•	Ping the device<br>
-•	Login to the device using Cisco Device Manager GUI<br>
-•	Login to the device using CLI<br>
-•	Run SNMP walk</p></td>
-</tr>
-</tbody>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Activities:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Read</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+<li>
+<p>Create</p>
+</li>
+</ul>
 </div>
-<div class="sect3">
-<h4 id="performance">Performance</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Problem:</th>
-<th class="tableblock halign-left valign-top">Try this:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error: Performance acquisition not supported by SNMP v1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">•	Edit Data Source and disable Switch Performance<br>
-•	Modify Data Source and switch configuration to use SNMP v2 or higher</p></td>
-</tr>
-</tbody>
-</table>
+</li>
+<li>
+<p>Total number of alerts in the last seven days.</p>
+</li>
+<li>
+<p>Total number of activities in the last 7 days.</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>Additional information may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
+<p>Click <strong>View Activity Detail</strong> to access the <a href="forensic_activity_history">Activity History</a> of the user being examined.</p>
 </div>
 </div>
 </div>
@@ -2144,8 +1992,8 @@ A user-friendly name for a port that can be used only for the active configurati
   <div class="page-nav-toolbar">
     <div class="page-nav-contribute"  >
       <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/task_dc_cisco_fc_switch.adoc" class="btn btn-default githubEditButton" role="button"><img src="/cloudinsights/images/github.png" class="github-icon" /> Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Cisco MDS Fabric Switches data collector](https://docs.netapp.com/us-en/cloudinsights/task_dc_cisco_fc_switch.html)" class="btn btn-default githubEditButton" role="button"><img src="/cloudinsights/images/github.png" class="github-icon" /> Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/master/forensic_alert_detail.adoc" class="btn btn-default githubEditButton" role="button"><img src="/cloudinsights/us-en/images/github.png" class="github-icon" /> Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/issues/new?body=Page%3A%20[Alert Details](https://docs.netapp.com/us-en/cloudinsights/forensic_alert_detail.html)" class="btn btn-default githubEditButton" role="button"><img src="/cloudinsights/us-en/images/github.png" class="github-icon" /> Request doc changes</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
     </div>
     <div class="page-nav-container">
@@ -2178,7 +2026,7 @@ A user-friendly name for a port that can be used only for the active configurati
               <a class="n-footer__corp-link modaal" href="#n-language-selector-menu">
                 <svg class="n-icon-baseline-language" aria-labelledby="title">
                   <title>netapp-globe</title>
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#globe"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#globe"></use>
                 </svg>
                 English
               </a>
@@ -2193,7 +2041,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">blog</span>
 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
   <title>blog@</title>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#blog"></use>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#blog"></use>
 </svg>
 
 </a>
@@ -2203,7 +2051,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">community</span>
 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
 <title>community@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#comments"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#comments"></use>
 </svg>
 
 </a>
@@ -2213,7 +2061,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">twitter</span>
 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
 <title>twitter@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#twitter"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#twitter"></use>
 </svg>
 
 </a>
@@ -2223,7 +2071,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">facebook</span>
 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
 <title>facebook@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#facebook"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#facebook"></use>
 </svg>
 
 </a>
@@ -2233,7 +2081,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">linkedin</span>
 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
 <title>linkedin@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#linkedin"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#linkedin"></use>
 </svg>
 
 </a>
@@ -2243,7 +2091,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">youtube</span>
 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
 <title>youtube@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#youtube"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#youtube"></use>
 </svg>
 
 </a>
@@ -2253,7 +2101,7 @@ A user-friendly name for a port that can be used only for the active configurati
 <span class="n-footer__social-link-text">slideshare</span>
 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
 <title>slideshare@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/common/svg/sprite.svg#slideshare"></use>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/cloudinsights/us-en/common/svg/sprite.svg#slideshare"></use>
 </svg>
 
 </a>
@@ -2279,11 +2127,11 @@ A user-friendly name for a port that can be used only for the active configurati
       </div>
 
       <!-- Elasticsearch JS -->
-      <script type="text/javascript" src='/cloudinsights/js/bundle.js'></script>
+      <script type="text/javascript" src='/cloudinsights/us-en/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
-      <script type="text/javascript" src='/cloudinsights/js/prism.js'></script>
-      <script type="text/javascript" src='/cloudinsights/js/prism-curl.js'></script>
+      <script type="text/javascript" src='/cloudinsights/us-en/js/prism.js'></script>
+      <script type="text/javascript" src='/cloudinsights/us-en/js/prism-curl.js'></script>
     </div>
     <script>
       document.body.offsetWidth=1903;
@@ -2291,7 +2139,7 @@ A user-friendly name for a port that can be used only for the active configurati
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/cloudinsights/js/www-ntap.js'></script>
+    <script src='/cloudinsights/us-en/js/www-ntap.js'></script>
   </body>
 
   
