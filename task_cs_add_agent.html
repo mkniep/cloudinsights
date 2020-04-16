@@ -1809,7 +1809,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-04-09 16:05:56 +0000">04/09/2020</time>
+<time datetime="2020-04-16 13:40:32 +0000">04/16/2020</time>
 
 
 <span>Contributors
@@ -1975,51 +1975,6 @@ If the command returns information similar to 'IBM J9 VM (build 2.9.x)' you need
 </div>
 </div>
 <div class="sect1">
-<h2 id="steps-to-install-an-agent-from-a-non-root-account">Steps to Install an Agent from a Non-Root Account</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can perform an installation from a non-Root user account using the following steps:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a local user and set the password: (where username is the name you choose)<br>
-<code>sudo useradd username</code><br>
-<code>sudo passwd username password</code> (enter the password for the local user)</p>
-</li>
-<li>
-<p>Uncomment the following lines in /etc/sudoers</p>
-<div class="ulist">
-<ul>
-<li>
-<p>%wheel ALL=(ALL) ALL</p>
-</li>
-<li>
-<p>%wheel ALL=(ALL) NOPASSWD: ALL</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add the local user you created to the wheel group:<br>
-<code>sudo usermod -aG wheel username</code></p>
-</li>
-<li>
-<p>Create an installation folder in the local user&#8217;s home directory and install the Cloud Secure Agent from within the folder:<br>
-<code>sudo cd /home/username/</code><br>
-<code>sudo mkdir install; cd install/</code></p>
-</li>
-<li>
-<p>Install the Cloud Secure Agent using the Curl command taken from the Web UI.</p>
-<div class="paragraph">
-<p>Provide a -k in the Curl command if your RHEL platform performs a strict certificate check. For CentOS systems, the -k option is not required.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="steps-to-install-agent">Steps to Install Agent</h2>
 <div class="sectionbody">
 <div class="olist arabic">
@@ -2072,10 +2027,6 @@ If the command returns information similar to 'IBM J9 VM (build 2.9.x)' you need
 <div class="title">After You Finish</div>
 <ol class="arabic">
 <li>
-<p>Verify that the agent is installed using the following command:<br>
-<code>sudo grep -irn register agent.log</code></p>
-</li>
-<li>
 <p>You need to configure a <a href="task_config_user_dir_connect.html">User Directory Collector </a>.</p>
 </li>
 <li>
@@ -2110,13 +2061,13 @@ If the command returns information similar to 'IBM J9 VM (build 2.9.x)' you need
 <p>You can use the following command to verify the agent installed correctly:<br>
 <code>sudo grep -irn register /opt/netapp/cloudsecure/agent/logs/agent.log</code></p>
 </li>
-<li>
-<p>Use the following script to control the Cloud Secure service:<br>
-<code>sudo cloud-secure-agent-service.sh --help</code></p>
-</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Use the following script to uninstall the agent:<br>
-<code>sudo cloud-secure-agent-uninstall.sh</code></p>
+<code>sudo cloudsecure-agent-uninstall.sh</code></p>
 </li>
 </ul>
 </div>
