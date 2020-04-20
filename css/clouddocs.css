@@ -503,6 +503,36 @@ h1.n-doc__component-detail-heading {
 .n-pdf-body li a {
   font-size: 13px;
   line-height: 16px;
-  padding: 7px 15px;
+  padding: 3px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
 }
+
+.n-pdf-section {
+    background-color: #e3e3e3;
+    border: #e3e3e3;
+    align-items: center;
+    border: 1px solid transparent;
+    display: inline-flex;
+    font-size: .675rem;
+    padding-left: 1.2em;
+    padding-right: .40em;
+    height: 2em;
+    line-height: 1;
+    color: #454545;
+    font-weight: bolder;
+    width: 265px;
+    box-shadow: 2px 0px 0px rgba(0,0,0,.08);
+}
+.n-pdf-section-title {
+    color: #454545;
+    font-family: proxima-nova,Arial,&quot;Helvetica Neue&quot;,Helvetica,sans-serif;
+    font-style: normal;
+    text-decoration: none !important;
+    font-weight: 600;
+    width: 100%;
+
+}
+
 
