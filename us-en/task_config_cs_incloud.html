@@ -2687,7 +2687,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-04-10 14:51:00 +0000">04/10/2020</time>
+<time datetime="2020-04-24 15:20:38 +0000">04/24/2020</time>
 
 
 <span>Contributors
@@ -2861,38 +2861,65 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Click <strong>Admin&gt;Data Collectors&gt;Data Collectors&gt;+Data Collector</strong> and specify the NetApp ONTAP SVM data collector.</p>
-</li>
-<li>
-<p>Configure the data collector</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Provide a name</p>
-</li>
-<li>
-<p>Agent name is the agent configured in the cloud</p>
-</li>
-<li>
-<p>SVM management IP Address</p>
-</li>
-<li>
-<p>Usename</p>
-</li>
-<li>
-<p>Password</p>
-</li>
-<li>
-<p>Click <strong>Add Collector</strong></p>
+<p>Click <strong>Admin &gt; Data Collectors &gt; Data Collectors &gt; +Data Collector</strong> and specify the NetApp ONTAP Cloud Volumes data collector. Enter the required information in the fields.</p>
 </li>
 </ol>
 </div>
-</li>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Configuration</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Field</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique name for the Data Collector</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Agent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a configured agent from the list or click <strong>Add Agent</strong> to configure an Agent. See <a href="concept_cs_agent_requirements.html">Agent requirements</a> and <a href="task_cs_add_agent.html">Agent Installation</a> for configuration information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SVM Management IP Address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Management IP Address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Username</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User name to access the SVM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SVM Password</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enter complete share names to exclude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of shares to exclude from event collection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enter complete volume names to exclude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of volumes to exclude from event collection</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>Add Collector</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Verify the Agent Server is running using the<br>
 <code>docker ps</code> command and a <code>docker logs &lt;docker_image_id&gt;</code> file.</p>
 <div class="paragraph">
-<p>All of the SVM data collector&#8217;s service status should be in the 'running' state.</p>
+<p>All of the data collector&#8217;s service status should be in the 'running' state.</p>
+</div>
+</li>
+</ol>
 </div>
 </li>
 </ol>
