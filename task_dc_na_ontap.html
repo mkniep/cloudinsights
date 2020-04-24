@@ -2674,7 +2674,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-02-28 14:14:08 +0000">02/28/2020</time>
+<time datetime="2020-04-24 13:55:10 +0000">04/24/2020</time>
 
 
 <span>Contributors
@@ -2765,7 +2765,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>You must have access to an Administrator account used for read-only API calls.</p>
+<p>You must have access to an account used for read-only API calls.</p>
 </li>
 <li>
 <p>Target IP is the cluster management LIF.</p>
@@ -2778,6 +2778,18 @@
 </li>
 <li>
 <p>Access validation: Telnet or SSH to the cluster management LIF from the acquisition unit, using the username and password.</p>
+</li>
+<li>
+<p>For Clustered ONTAP you need the IP cluster management LIF or the management IP of the cluster. Additionally, requires username (with read-only role name to ontapi application to the default Vserver, see below) and password to log into NetApp cluster.</p>
+<div class="paragraph">
+<p>To create a read-only user account (may be slightly different on different ONTAP versions), log into the NetApp storage system by using an SSH client and run the following command (case sensitive) and use your own user account variables:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>security login role create -role test -cmddirname DEFAULT -access readonly
+security login create - user-or-group-name useraccount -application ontap -authmethod password -role test-vserver storagename</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
