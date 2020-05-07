@@ -2687,7 +2687,7 @@
 
 <p class="page-details">
 
-<time datetime="2020-05-04 17:18:03 +0000">05/04/2020</time>
+<time datetime="2020-05-07 15:19:51 +0000">05/07/2020</time>
 
 
 <span>Contributors
@@ -2735,6 +2735,7 @@
 <li><a href="#formatting-gauge-widgets">Formatting Gauge Widgets</a></li>
 <li><a href="#formatting-single-value-widget">Formatting Single-Value Widget</a></li>
 <li><a href="#choosing-the-unit-for-displaying-data">Choosing the Unit for Displaying Data</a></li>
+<li><a href="#tv-mode-and-auto-refresh">TV Mode and Auto-Refresh</a></li>
 <li><a href="#dashboard-groups">Dashboard Groups</a></li>
 <li><a href="#pin-your-favorite-dashboards">Pin your Favorite Dashboards</a></li>
 </ul>
@@ -3825,6 +3826,100 @@ writes/min</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tv-mode-and-auto-refresh">TV Mode and Auto-Refresh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Data in widgets on Dashboards and Asset Landing Pages auto-refresh according a refresh interval determined by the Dashboard Time Range selected (or widget time range, if set to override the dashboard time). The refresh interval is based on whether the widget is time-series (line, spline, area, stacked area chart) or non-time-series (all other charts).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dashboard Time Range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time-Series Refresh Interval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-Time-Series Refresh Interval</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 15 Minutes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 Second</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Minute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 1 Hour</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15 Second</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Minute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 3 Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30 Second</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 Minute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 24 Hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 Minute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 Minute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 3 Days</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15 Minute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15 Minute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 7 Days</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Hour</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last 30 Days</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Hour</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Hour</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Each widget displays its auto-refresh interval in the upper-right corner of the widget.</p>
+</div>
+<div class="paragraph">
+<p>Auto-refresh is not available for Custom dashboard time range.</p>
+</div>
+<div class="paragraph">
+<p>When combined with <strong>TV Mode</strong>, auto-refresh allows for near-real-time display of data on a dashboard or asset page. TV Mode provides an uncluttered display; the navigation menu is hidden, providing more screen real estate for your data display, as is the Edit button. TV Mode ignores typical Cloud Insights timeouts, leaving the display live until logged out manually or automatically by authorization security protocols.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Because NetApp Cloud Central has its own user login timeout of 7 days, Cloud Insights must log out with that event as well. You can simply log in again and your dashboard will continue to display.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To activate TV Mode, click the <span class="image"><img src="./media/ActivateTVMode.png" alt="TV Mode"></span> button.</p>
+</li>
+<li>
+<p>To disable TV Mode, click the <strong>Exit</strong> button in the upper left of the screen. <span class="image"><img src="./media/ExitTVMode.png" alt="Exit Button"></span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can temporarily suspend auto-refresh by clicking the Pause button in the upper right corner. While paused, the dashboard time range field will display the paused data&#8217;s active time range. Your data is still being acquired and updated while auto-refresh is paused. Click the Resume button to continue auto-refreshing of data.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/AutoRefreshPaused.png" alt="Auto-Refresh paused"></span></p>
 </div>
 </div>
 </div>
